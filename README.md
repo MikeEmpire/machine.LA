@@ -1,6 +1,6 @@
-## MACHINE.LA project
+# MACHINE.LA project
 
-# Getting Started
+## Getting Started
 First you would run
 ```shell
 npm install
