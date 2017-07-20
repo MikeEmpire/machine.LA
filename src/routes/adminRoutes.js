@@ -1,60 +1,47 @@
 var express = require('express');
-
 var adminRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
-
-var books = [
-  {
-    title: 'War and Peace',
-    genre: 'Historical Fiction',
-    author: 'Lev Nikolayevich Tolstoy',
-    read: false
-  },
-  {
-    title: 'Les Miserables',
-    genre: 'Historical Fiction',
-    author: 'Victor Hugo',
-    read: false
-  },
-  {
-    title: 'A Journey into the Center of the Earth',
-    genre: 'Science Fiction',
-    author: 'Jules Verne',
-    read: false
-  },
-  {
-    title: 'The Time Machine',
-    genre: 'Science Fiction',
-    author: 'H.G. Wells',
-    read: false
-  },
-  {
-    title: 'Childhood',
-    genre: 'Biography',
-    author: 'Lev Nikolayevich Tolstoy',
-    read: false
-  },
-  {
-    title: 'Life on the Mississippi',
-    genre: 'History',
-    author: 'Mark Twain',
-    read: false
-  }
-];
+var passport = require('passport');
 
 var router = function(nav) {
-  adminRouter.route('/addBooks')
-      .get(function(req, res) {
-        var url = 'mongodb://localhost:27017/libraryApp';
-        mongodb.connect(url, function(err, db) {
-          console.log(db);
-          var collection = db.collection('books');
-          collection.insertMany(books, function(err, results) {
-            res.send(results);
-            db.close();
-          });
-        });
+  adminRouter.route('/')
+      .post(passport.authenticate('local', {
+        failureRedirect: '/admin'
+      }), function(req, res){
+        res.redirect('/admin/profile');
+      })
+      .get(function(req, res){
+        res.render('signIn');
       });
+
+  adminRouter.route('/profile')
+      .all(function (req, res, next) {
+        if (!req.user) {
+              res.redirect('/');
+            }
+            next();
+      })
+      .get(function (req, res) {
+            var url = 'mongodb://admin:the_machine@ds034807.mlab.com:34807/the-machine';
+            res.render('admin')
+      });
+  // adminRouter.route('/signUp')
+  //     .post(function(req, res) {
+  //       var url = 'mongodb://admin:the_machine@ds034807.mlab.com:34807/the-machine';
+  //       mongodb.connect(url, function(err, db) {
+  //         var collection = db.collection('users');
+  //         var user = {
+  //           username: req.body.userName,
+  //           password: req.body.password
+  //         };
+  //         collection.insert(user, function(err, results) {
+  //           if (err) {console.log(err);}
+  //           req.login(results.ops[0], function() {
+  //             res.redirect('/auth/profile');
+  //           });
+  //         });
+  //       });
+  //     });
   return adminRouter;
 };
 module.exports = router;
