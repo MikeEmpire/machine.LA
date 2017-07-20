@@ -4,11 +4,11 @@ var mongodb = require('mongodb').MongoClient;
 
 module.exports = function() {
   passport.use(new LocalStrategy({
-        usernameField: 'userName',
+        usernameField: 'username',
         passwordField: 'password'
   },
   function(username, password, done){
-    var url = 'mongodb://localhost:27017/libraryApp';
+    var url = 'mongodb://admin:the_machine@ds034807.mlab.com:34807/the-machine';
     mongodb.connect(url, function(err, db){
       var collection = db.collection('users');
       collection.findOne({
