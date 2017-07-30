@@ -23,7 +23,7 @@ var router = function(nav) {
       })
       .get(function (req, res) {
             var url = 'mongodb://admin:the_machine@ds034807.mlab.com:34807/the-machine';
-            res.render('admin')
+            res.render('admin');
       });
   // adminRouter.route('/signUp')
   //     .post(function(req, res) {
