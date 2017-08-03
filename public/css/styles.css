@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montaga|Montserrat:600');
+
 body {
     font-family: sans-serif, arial, helvetica;
 }
@@ -9,6 +11,55 @@ body {
 #pp-nav span, .pp-slidesNav span {
     border-color: #bbb !important;
 }
+/* Menu
+ * --------------------------------------- */
+#menu li {
+  font-family: 'Montserrat';
+	display:inline-block;
+	margin: 6% 0 0 4%;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+}
+#menu li.active{
+	border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: #E85126;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 0px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: black;
+}
+img {
+    position: static;
+    width: 11%;
+    top: 6px;
+    left: 7px;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
 /* Sections
 	* --------------------------------------- */
  .section {
@@ -18,7 +69,12 @@ body {
     background-repeat: no-repeat;
 }
 #section1 {
-    background-image: url(https://dgt5r4zz5sach.cloudfront.net/~/media/images/modules/large/hbr_h_gif_final.gif?as=1&t=635549701220714646);
+    background-color: white;
+}
+.half-width {
+    height: 100%;
+    width: 50%;
+    float: right;
 }
 #section2 {
     background-image: url(https://dgt5r4zz5sach.cloudfront.net/~/media/images/modules/large/nike%20making%20large.jpg?as=1&t=635616687017735022);
@@ -72,8 +128,8 @@ body {
 /* Intro texts
 	 * --------------------------------------- */
  .intro {
-    position: absolute;
-    bottom: 100px;
+    position: relative;
+    bottom: 0px;
     text-align: center;
     width: 100%;
 }
@@ -116,4 +172,31 @@ body {
     margin: 20px 0 0 0;
     line-height: 1.35em;
     color: #333;
+}
+
+/* Global */
+.line-1{
+    position: relative;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 15em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }

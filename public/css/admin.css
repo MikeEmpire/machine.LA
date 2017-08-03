@@ -1,0 +1,30 @@
+body {
+  background: url("../images/machinelogo2.png") no-repeat;
+  color: black;
+  background-position: 50% 100%;
+  background-size: 40%;
+}
+
+h1 {
+  padding-top: 3%;
+  padding-left: 3%;
+}
+
+h4 {
+  margin-top: 20%;
+  padding-left: 3%
+}
+
+#edit {
+  margin-top: 10%;
+}
+
+.edit-section {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.text {
+  overflow: hidden;
+}

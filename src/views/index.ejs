@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>pagePiling.js plugin - Backgrounds</title>
+  <title>The MACHINE</title>
   <meta name="author" content="Alvaro Trigo Lopez" />
   <meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
   <meta name="keywords" content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
@@ -26,7 +26,7 @@
           'textColor': '#f2f2f2',
           'bulletsColor': '#ccc',
           'position': 'right',
-          'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+          'tooltips': ['Home', 'About', 'Contact', 'Portfolio']
         },
         onLeave: function(index, nextIndex, direction) {
 
@@ -61,25 +61,84 @@
             }, 700, 'easeInQuart');
           }
         },
+        afterRender: function() {
+          //playing the video
+          $('video').get(0).play();
+        }
       });
       $('#arrow').click(function() {
         $.fn.pagepiling.moveSectionDown();
       });
     });
   </script>
+  <style>
+    /* Centered texts in each section
+		* --------------------------------------- */
+
+    .section {
+      text-align: center;
+    }
+
+    #myVideo {
+      position: absolute;
+      z-index: 4;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-color: black;
+      /* in case the video doesn't fit the whole page*/
+      background-image: /* our video */
+      ;
+      background-position: center center;
+      background-size: contain;
+      object-fit: cover;
+      /*cover video background */
+    }
+    /* Layer with position absolute in order to have it over the video
+		* --------------------------------------- */
+
+    #section1 .layer {
+      position: absolute;
+      z-index: 5;
+      width: 100%;
+      left: 0;
+      top: 43%;
+      height: 100%;
+    }
+
+    #section1 h1 {
+      color: #fff;
+    }
+
+    #infoMenu li a {
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
+  <ul id="menu">
+    <a href="#page1"><img src="/images/machinelogo.png" alt="Logo for the Machine"></a>
+    <li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
+    <li data-menuanchor="page2"><a href="#page2">About</a></li>
+    <li data-menuanchor="page3"><a href="#page3">Contact</a></li>
+    <li data-menuanchor="page4"><a href="#page4">Portfolio</a></li>
+  </ul>
 
-  <button id="arrow">	<span>↓</span>
+  <button id="arrow">	<span>↓</span></button>
 
-</button>
   <div id="pagepiling">
     <div class="section" id="section1">
-      <div class="intro">
-        <h1>All business.</h1>
-
-        <p>A new home for the word's most influencial management magazine.</p>
+      <video autoplay loop muted id="myVideo">
+				<source src="/imgs/flowers.mp4" type="video/mp4">
+				<source src="/imgs/flowers.webm" type="video/webm">
+			</video>
+      <div class="layer">
+        <h1 class="line-1 anim-typewriter">Welcome To The Machine</h1>
       </div>
     </div>
     <div class="section" id="section2">
