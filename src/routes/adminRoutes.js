@@ -6,24 +6,28 @@ var passport = require('passport');
 var router = function(nav) {
   adminRouter.route('/')
       .post(passport.authenticate('local', {
+        // if login credentials don't correspond
         failureRedirect: '/admin'
-      }), function(req, res){
-        res.redirect('/admin/profile');
+      }), function(req, res) {
+      // if login credentials properly correspond
+      res.redirect('/admin/profile');
       })
-      .get(function(req, res){
+      .get(function(req, res) {
         res.render('signIn');
       });
 
   adminRouter.route('/profile')
-      .all(function (req, res, next) {
-        if (!req.user) {
-              res.redirect('/');
-            }
-            next();
-      })
-      .get(function (req, res) {
-            var url = 'mongodb://admin:the_machine@ds034807.mlab.com:34807/the-machine';
-            res.render('admin');
+      .get(function(req, res) {
+        var url = 'mongodb://admin:the_machine@ds034807.mlab.com:34807/the-machine';
+        res.render('admin', {
+          username: req.user.username,
+          password: req.user.password
+        });
+      });
+
+  adminRouter.route('/profile/about')
+      .get(function(req, res) {
+        res.render('editabout')
       });
   // adminRouter.route('/signUp')
   //     .post(function(req, res) {

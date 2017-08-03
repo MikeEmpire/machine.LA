@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 
 app.use(cookieParser());
 app.use(express.static('public'));
-app.use(session({secret: 'library', resave: true, saveUninitialized: true}));
+app.use(session({secret: 'machine_la ', resave: true, saveUninitialized: true}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 

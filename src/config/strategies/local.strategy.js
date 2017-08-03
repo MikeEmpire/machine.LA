@@ -12,11 +12,13 @@ module.exports = function() {
     mongodb.connect(url, function(err, db){
       var collection = db.collection('users');
       collection.findOne({
-        username: username
+        username: username,
+        password: password
       },
       function(err, results) {
           if (results.password === password){
               var user = results;
+              console.log(user);
               done(null, user);
           } else {
               done(null, false, {message: 'Bad password'});
