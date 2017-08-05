@@ -10,11 +10,13 @@
   <meta name="Resource-type" content="Document" />
 
   <link rel="stylesheet" type="text/css" href="/lib/pagePiling.js/jquery.pagepiling.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/styles.css">
-
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
   <script src="/lib/pagePiling.js/jquery.pagepiling.js"></script>
+  <script type="text/javascript" src="/js/masonry.js">
+  </script>
   <script type="text/javascript">
     var deleteLog = false;
 
@@ -26,7 +28,7 @@
           'textColor': '#f2f2f2',
           'bulletsColor': '#ccc',
           'position': 'right',
-          'tooltips': ['Home', 'About', 'Contact', 'Portfolio']
+          'tooltips': ['Home', 'About', 'Our Team', 'Portfolio']
         },
         onLeave: function(index, nextIndex, direction) {
 
@@ -123,9 +125,9 @@
 <body>
   <ul id="menu">
     <a href="#page1"><img src="/images/machinelogo.png" alt="Logo for the Machine"></a>
-    <li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
+    <li data-menuanchor="page1" class="active"><a href="#page1" style="padding-left:10%">Home</a></li>
     <li data-menuanchor="page2"><a href="#page2">About</a></li>
-    <li data-menuanchor="page3"><a href="#page3">Contact</a></li>
+    <li data-menuanchor="page3"><a href="#page3">Our Team</a></li>
     <li data-menuanchor="page4"><a href="#page4">Portfolio</a></li>
   </ul>
 
@@ -142,51 +144,105 @@
       </div>
     </div>
     <div class="section" id="section2">
-      <div class="intro">
-        <h1>Nike Making.</h1>
-
-        <p>Inspiring the creative community to make sustainable design choices.</p>
+      <div class="content">
+        <div class="topText">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+              <h1>About The Machine</h1>
+              <p>A Management and Production firm focused on emerging talent, technologies and platforms.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bottomText">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
+                is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
+                squeaky clean. Cloth talk.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
+                is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
+                squeaky clean. Cloth talk.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="section" id="section3">
-      <div class="intro">
-        <h1>Floored.</h1>
+      <div class="content">
+        <div class="topText">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+              <h1>Our Team</h1>
+              <p>A Management and Production firm focused on emerging talent, technologies and platforms.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bottomText">
+          <div class="row">
 
-        <p>Clean, modern, and fast. Introducing the new Lexus.com.</p>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+              <div class="circle">
+                <img src="/images/heads/KevinHerrera_Head.png" alt="">
+              </div>
+              <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
+                is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
+                squeaky clean. Cloth talk.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+              <div class="circle">
+                <img src="/images/heads/KevinHerrera_Head.png" alt="">
+              </div>
+              <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
+                is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
+                squeaky clean. Cloth talk.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+              <div class="circle">
+                <img src="/images/heads/KevinHerrera_Head.png" alt="">
+              </div>
+              <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
+                is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
+                squeaky clean. Cloth talk.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="section pp-scrollable" id="section4">
       <div class="content">
         <div class="header">
-          <h1>pagePiling.js</h1>
+          <h1>Our Portfolio</h1>
 
-          <p>Pile your sections one over another and access them scrolling or by URL!</p>
+          <p>Scroll Down to view our previous works</p>
         </div>
         <div class="page">
-          <p>Eos ex tale consul phaedrum. Ex mel enim delectus. An stet vide copiosae mei. Ne ferri oportere accusamus sit, eum an stet solet. Ex maiestatis dissentiet eum. An pro recteque intellegam, eum convenire contentiones te. Cum id nobis mediocritatem.
-            Brute dicta putent no vel. Pro ad verear eripuit vituperatoribus. Vim ad utamur accusata recteque, an cum iriure scriptorem. Ei suas democritum sed, ceteros omittam eos et. Case eius ne vix, duo ne autem saperet insolens, mel posse aperiam
-            labores no. Alienum accusamus an est. Qui iudicabit intellegat percipitur in, est in agam fugit assueverit. Pro cu mazim oporteat, soluta vituperata instructior mei ea, an vix sonet vocent laboramus. Vis vocent ocurreret ad. Congue causae
-            iisque no mei, vim fastidii platonem iracundia ei, detraxit sadipscing usu eu. Est ei sonet tempor dicunt. In tota regione blandit sea, at nec numquam dissentias, eu sit sapientem evertitur. Suas mediocrem incorrupte vel ei, intellegebat reprehendunt
-            eum ad.</p>
-          <p>Probo latine iudicabit ad quo, nec adhuc nonumy adipiscing ea. Pro labore recusabo at. Tamquam electram constituam ut vel, assum omnes te ius. An mea illum petentium salutatus, vix et erat sapientem comprehensam. Movet tacimates ut mei, id sea
-            minim graeco antiopam, te solet melius tibique his. Dicam graecis volumus has te. Amet affert menandri ex has. Per ei malis legendos principes, et duo movet deterruisset. Et cum possim vivendo, no mea animal saperet disputando. Ex legere facilisis
-            mei. Quo primis everti disputando at, nam ut quis copiosae. Salutatus forensibus in qui. Ut usu zril referrentur, consequat vulputate intellegat sed cu. Est at imperdiet reprehendunt. Singulis mnesarchum contentiones eos an, ex mea stet vocibus.
-            Recteque inciderint nec et. Eam at putent disputando, ad summo aperiri philosophia quo, natum mundi malorum te cum. Id modus aliquid definitiones est.</p>
-          <p>Ex sint percipitur pro, dolor mentitum sea an. Vel simul alienum ex, vim debitis antiopam id. Ponderum luptatum te eum. Idque dicant theophrastus ea pri. Eum hinc choro ut, et qui habemus iracundia similique. Mei numquam platonem definitiones
-            id. Per at nusquam vivendum suscipiantur, te mei nibh offendit singulis. Aperiri recusabo persequeris duo cu. Ex justo rationibus complectitur cum. Ad mucius salutatus mnesarchum mei, et dicit probatus similique qui. Malis vivendum consequuntur
-            id sed. Vix ei fuisset perpetua, partem audire pericula nec no. Partem putant philosophia id est. Et vel nibh munere, vis numquam nusquam forensibus ad, in mazim mundi vitae eam. Ea usu exerci audire intellegam. Sit iuvaret corrumpit laboramus
-            cu, autem mazim ea sed, sit tacimates elaboraret ut.</p>
-          <p>Eos ex tale consul phaedrum. Ex mel enim delectus. An stet vide copiosae mei. Ne ferri oportere accusamus sit, eum an stet solet. Ex maiestatis dissentiet eum. An pro recteque intellegam, eum convenire contentiones te. Cum id nobis mediocritatem.
-            Brute dicta putent no vel. Pro ad verear eripuit vituperatoribus. Vim ad utamur accusata recteque, an cum iriure scriptorem. Ei suas democritum sed, ceteros omittam eos et. Case eius ne vix, duo ne autem saperet insolens, mel posse aperiam
-            labores no. Alienum accusamus an est. Qui iudicabit intellegat percipitur in, est in agam fugit assueverit. Pro cu mazim oporteat, soluta vituperata instructior mei ea, an vix sonet vocent laboramus. Vis vocent ocurreret ad. Congue causae
-            iisque no mei, vim fastidii platonem iracundia ei, detraxit sadipscing usu eu. Est ei sonet tempor dicunt. In tota regione blandit sea, at nec numquam dissentias, eu sit sapientem evertitur. Suas mediocrem incorrupte vel ei, intellegebat reprehendunt
-            eum ad. Probo latine iudicabit ad quo, nec adhuc nonumy adipiscing ea. Pro labore recusabo at. Tamquam electram constituam ut vel, assum omnes te ius. An mea illum petentium salutatus, vix et erat sapientem comprehensam. Movet tacimates ut
-            mei, id sea minim graeco antiopam, te solet melius tibique his. Dicam graecis volumus has te. Amet affert menandri ex has. Per ei malis legendos principes, et duo movet deterruisset. Et cum possim vivendo, no mea animal saperet disputando.
-            Ex legere facilisis mei. Quo primis everti disputando at, nam ut quis copiosae. Salutatus forensibus in qui. Ut usu zril referrentur, consequat vulputate intellegat sed cu. Est at imperdiet reprehendunt. Singulis mnesarchum contentiones eos
-            an, ex mea stet vocibus. Recteque inciderint nec et. Eam at putent disputando, ad summo aperiri philosophia quo, natum mundi malorum te cum. Id modus aliquid definitiones est. Ex sint percipitur pro, dolor mentitum sea an. Vel simul alienum
-            ex, vim debitis antiopam id. Ponderum luptatum te eum. Idque dicant theophrastus ea pri. Eum hinc choro ut, et qui habemus iracundia similique. Mei numquam platonem definitiones id. Per at nusquam vivendum suscipiantur, te mei nibh offendit
-            singulis. Aperiri recusabo persequeris duo cu. Ex justo rationibus complectitur cum. Ad mucius salutatus mnesarchum mei, et dicit probatus similique qui. Malis vivendum consequuntur id sed. Vix ei fuisset perpetua, partem audire pericula nec
-            no. Partem putant philosophia id est. Et vel nibh munere, vis numquam nusquam forensibus ad, in mazim mundi vitae eam. Ea usu exerci audire intellegam. Sit iuvaret corrumpit laboramus cu, autem mazim ea sed, sit tacimates elaboraret ut.</p>
+          <div class="grid">
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--height3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width3"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width2 grid-item--height3"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--width2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+          </div>
         </div>
       </div>
     </div>
