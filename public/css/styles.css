@@ -24,9 +24,14 @@ body {
   display: inline-block;
   color: #000;
   background: #fff;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.0);
   margin-top: 8%;
   margin-left: 15%;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  text-decoration: none;
 }
 
 #menu li.active {
@@ -46,7 +51,8 @@ body {
 }
 
 #menu li:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background-color: #FFF;
+  color: white;
 }
 
 #menu li a, #menu li.active a {
@@ -366,4 +372,11 @@ body {
   font-size: 22px;
   z-index: 2;
   /* above items */
+}
+
+@media (max-height: 600px) {
+  #section1 {
+    height: 130%;
+    background-color: white;
+  }
 }
