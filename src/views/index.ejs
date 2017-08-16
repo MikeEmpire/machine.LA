@@ -22,8 +22,9 @@
 
     $(document).ready(function() {
       $('#pagepiling').pagepiling({
+        direction: 'horizontal',
         menu: '#menu',
-        anchors: ['page1', 'page2', 'page3'],
+        anchors: ['page1', 'page2', 'page3', 'page4'],
         navigation: {
           'textColor': '#f2f2f2',
           'bulletsColor': '#ccc',
@@ -62,10 +63,6 @@
               top: '100%'
             }, 700, 'easeInQuart');
           }
-        },
-        afterRender: function() {
-          //playing the video
-          $('video').get(0).play();
         }
       });
       $('#arrow').click(function() {
@@ -79,37 +76,6 @@
 
     .section {
       text-align: center;
-    }
-
-    #myVideo {
-      position: absolute;
-      z-index: 4;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background-size: 100% 100%;
-      background-color: black;
-      /* in case the video doesn't fit the whole page*/
-      background-image: /* our video */
-      ;
-      background-position: center center;
-      background-size: contain;
-      object-fit: cover;
-      /*cover video background */
-    }
-    /* Layer with position absolute in order to have it over the video
-		* --------------------------------------- */
-
-    #section1 .layer {
-      position: absolute;
-      z-index: 5;
-      width: 100%;
-      left: 0;
-      top: 43%;
-      height: 100%;
     }
 
     #section1 h1 {
