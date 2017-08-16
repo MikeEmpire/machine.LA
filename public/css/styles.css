@@ -25,7 +25,7 @@ body {
   color: #000;
   background: #fff;
   background: rgba(255, 255, 255, 0.0);
-  margin-top: 8%;
+  margin-top: 3%;
   margin-left: 15%;
   -moz-transition: all .2s ease-in;
   -o-transition: all .2s ease-in;
@@ -89,7 +89,9 @@ img {
 .section {
   background: white;
 }
-
+.layer {
+  margin-top: 8%;
+}
 #section1 {
   background-color: white;
 }
@@ -100,7 +102,7 @@ img {
   float: right;
 }
 
-#section2, #section3 {
+#section1, #section2, #section3 {
   background-image: url('../images/machinelogo2.png');
   background-position: 21rem 5rem;
   background-repeat: no-repeat;
@@ -303,6 +305,10 @@ h1 {
   width: 30%;
   border-radius: 50%;
   margin-left: 30%;
+}
+
+h4.text-center {
+  margin-top: 13%;
 }
 
 * {
