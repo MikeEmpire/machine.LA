@@ -8,7 +8,7 @@
   <meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
   <meta name="keywords" content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
   <meta name="Resource-type" content="Document" />
-
+  <script src="https://player.vimeo.com/api/player.js"></script>
   <link rel="stylesheet" type="text/css" href="/lib/pagePiling.js/jquery.pagepiling.css">
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/styles.css">
@@ -51,13 +51,10 @@
               top: '0%'
             }, 700, 'easeInQuart');
           }
-
-          //leaving our last section? The one with our normal site?
           if (index == 4) {
             $('#arrow').show();
-
             //fadding in navigation bullets
-            $('#pp-nav').fadeIn();
+            $('#pp-nav').fadeOut();
 
             $('#section4 .content').animate({
               top: '100%'
@@ -65,8 +62,11 @@
           }
         }
       });
-      $('#arrow').click(function() {
+      $('#rightArrow').click(function() {
         $.fn.pagepiling.moveSectionDown();
+      });
+      $('#leftArrow').click(function() {
+        $.fn.pagepiling.moveSectionUp();
       });
     });
   </script>
@@ -85,6 +85,9 @@
     #infoMenu li a {
       color: #fff;
     }
+    #pp-nav {
+      display: none;
+    }
   </style>
 </head>
 
@@ -97,14 +100,13 @@
     <li data-menuanchor="page4"><a href="#page4">Portfolio</a></li>
   </ul>
 
-  <button id="arrow">	<span>↓</span></button>
+  <div class="container">
+    <button class="arrow" id="rightArrow"><span>&#8594;</span></button>
+    <button class="arrow" id="leftArrow"><span>&#8592;</span></button>
+  </div>
 
   <div id="pagepiling">
     <div class="section" id="section1">
-      <video autoplay loop muted id="myVideo">
-				<source src="/imgs/flowers.mp4" type="video/mp4">
-				<source src="/imgs/flowers.webm" type="video/webm">
-			</video>
       <div class="layer">
         <h1 class="line-1 anim-typewriter">Welcome To The Machine</h1>
       </div>
@@ -158,7 +160,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
               <div class="circle">
-                <img src="/images/heads/KevinHerrera_Head.png" alt="">
+                <img src="/images/heads/AaronJudovits_Head.png" alt="">
               </div>
               <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
                 is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
@@ -166,7 +168,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
               <div class="circle">
-                <img src="/images/heads/KevinHerrera_Head.png" alt="">
+                <img src="/images/heads/RawnErickson_Head.png" alt="">
               </div>
               <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
                 is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,

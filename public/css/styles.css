@@ -117,47 +117,55 @@ img {
 /* Arrow
 	 * --------------------------------------- */
 
-#arrow {
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  cursor: pointer;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  border: 0;
-  outline: 0;
-  z-index: 100;
-  color: #BBB;
-  background: transparent;
-  -moz-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-  -o-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-  -webkit-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-  transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-  font: 36px Heiti, 'Lucida Grande', Arial;
-  font-weight: bold;
+button#rightArrow {
+    right: -10px;
 }
 
-#arrow span {
-  display: inline-block;
-  position: relative;
-  top: -18px;
-  -moz-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-  -o-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-  -webkit-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-  transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+button#leftArrow {
+    left: -10px;
 }
 
-#arrow:hover {
-  background: #EC008C;
+button.arrow {
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    border: 0;
+    color: #BBB;
+    background: transparent;
+    -moz-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    font: 36px Heiti, 'Lucida Grande', Arial;
+    font-weight: bold;
 }
 
-#arrow:hover span {
-  top: 0;
-  color: #FFF;
+.arrow span {
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    -moz-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
 }
 
+.arrow:hover{
+    background: rgba(255, 0, 0, 0.5);
+}
+#leftArrow:hover span{
+    left: -20px;
+    color: #FFF;
+}
 
+#rightArrow:hover span{
+    left: 10px;
+    color: #FFF;
+}
 /* Intro texts
 	 * --------------------------------------- */
 
