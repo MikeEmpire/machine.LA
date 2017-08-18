@@ -4,24 +4,29 @@ body {
 }
 
 
-/* Navigaton bullets styles
- * --------------------------------------- */
+/* Centered texts in each section
+* --------------------------------------- */
 
-#pp-nav li .active span, .pp-slidesNav .active span {
-  background: #bbb;
+.section {
+  text-align: center;
 }
 
-#pp-nav span, .pp-slidesNav span {
-  border-color: #bbb !important;
+#section1 h1 {
+  color: black;
+  margin-top: 6%;
+  margin-bottom: 2%;
+}
+
+#pp-nav {
+  display: none;
 }
 
 
 /* Menu
  * --------------------------------------- */
 
-#menu li {
+ul#menu li {
   font-family: 'Montserrat';
-  display: inline-block;
   color: #000;
   background: #fff;
   background: rgba(255, 255, 255, 0.0);
@@ -37,7 +42,7 @@ body {
 #menu li.active {
   border-left-width: 4px;
   border-left-style: solid;
-  border-left-color: #E85126;
+  border-left-color: #ff4040;
 }
 
 #menu li a {
@@ -89,9 +94,11 @@ img {
 .section {
   background: white;
 }
+
 .layer {
   margin-top: 8%;
 }
+
 #section1 {
   background-color: white;
 }
@@ -120,54 +127,57 @@ img {
 	 * --------------------------------------- */
 
 button#rightArrow {
-    right: -10px;
+  right: -10px;
 }
 
 button#leftArrow {
-    left: -10px;
+  left: -10px;
 }
 
 button.arrow {
-    text-align: center;
-    cursor: pointer;
-    position: fixed;
-    top: 50%;
-    width: 100px;
-    height: 100px;
-    z-index: 100;
-    border: 0;
-    color: #BBB;
-    background: transparent;
-    -moz-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-    -o-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-    -webkit-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-    transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-    font: 36px Heiti, 'Lucida Grande', Arial;
-    font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  border: 0;
+  color: #BBB;
+  background: transparent;
+  -moz-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+  -o-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+  -webkit-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+  transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+  font: 36px Heiti, 'Lucida Grande', Arial;
+  font-weight: bold;
 }
 
 .arrow span {
-    display: inline-block;
-    position: relative;
-    left: -10px;
-    -moz-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-    -o-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-    -webkit-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-    transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+  display: inline-block;
+  position: relative;
+  left: -10px;
+  -moz-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+  -o-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+  -webkit-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+  transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
 }
 
-.arrow:hover{
-    background: rgba(255, 0, 0, 0.5);
-}
-#leftArrow:hover span{
-    left: -20px;
-    color: #FFF;
+.arrow:hover {
+  background: rgba(255, 0, 0, 1);
 }
 
-#rightArrow:hover span{
-    left: 10px;
-    color: #FFF;
+#leftArrow:hover span {
+  left: -20px;
+  color: #FFF;
 }
+
+#rightArrow:hover span {
+  left: 10px;
+  color: #FFF;
+}
+
+
 /* Intro texts
 	 * --------------------------------------- */
 
@@ -388,9 +398,93 @@ body {
   /* above items */
 }
 
-@media (max-height: 600px) {
-  #section1 {
-    height: 130%;
-    background-color: white;
+@media only screen and (min-width:960px) {
+  /* styles for browsers larger than 960px; */
+  ul#menu li {
+    display: inline-block;
+  }
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  /* styles for browsers larger than 1440px; */
+  ul#menu li {
+    display: inline-block;
+  }
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:2000px) {
+  /* for sumo sized (mac) screens */
+  ul#menu li {
+    display: inline-block;
+  }
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width:480px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+  ul#menu li {
+    display: none;
+  }
+  div#page-content-wrapper {
+    display: block;
+  }
+}
+
+@media only screen and (device-width:768px) {
+  /* default iPad screens */
+  ul#menu li {
+    display: none;
+  }
+  div#page-content-wrapper {
+    display: block;
+  }
+}
+
+
+/* different techniques for iPad screening */
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+  ul#menu li {
+    display: none;
+  }
+  div#page-content-wrapper {
+    display: block;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+  ul#menu li {
+    display: none;
+  }
+  div#page-content-wrapper {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1570px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .container {
+    width: 1870px;
   }
 }
