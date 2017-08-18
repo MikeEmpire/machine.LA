@@ -3,103 +3,66 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The MACHINE</title>
-  <meta name="author" content="Alvaro Trigo Lopez" />
-  <meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
-  <meta name="keywords" content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+  <title>TheMachine</title>
+  <meta name="author" content="Michael Olie" />
+  <meta name="description" content="Website for TheMachine" />
+  <meta name="keywords" content="the,machine,themachine,michael,olie,marketing,talent,finder,los angeles" />
   <meta name="Resource-type" content="Document" />
   <script src="https://player.vimeo.com/api/player.js"></script>
   <link rel="stylesheet" type="text/css" href="/lib/pagePiling.js/jquery.pagepiling.css">
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-  <script src="/lib/pagePiling.js/jquery.pagepiling.js"></script>
-  <script type="text/javascript" src="/js/masonry.js">
-  </script>
-  <script type="text/javascript">
-    var deleteLog = false;
-
-    $(document).ready(function() {
-      $('#pagepiling').pagepiling({
-        direction: 'horizontal',
-        menu: '#menu',
-        anchors: ['page1', 'page2', 'page3', 'page4'],
-        navigation: {
-          'textColor': '#f2f2f2',
-          'bulletsColor': '#ccc',
-          'position': 'right',
-          'tooltips': ['Home', 'About', 'Our Team', 'Portfolio']
-        },
-        onLeave: function(index, nextIndex, direction) {
-
-          //fading out the txt of the leaving section
-          $('.section').eq(index - 1).find('h1, p').fadeOut(700, 'easeInQuart');
-
-          //fading in the text of the destination (in case it was fadedOut)
-          $('.section').eq(nextIndex - 1).find('h1, p').fadeIn(700, 'easeInQuart');
-
-
-          //reaching our last section? The one with our normal site?
-          if (nextIndex == 4) {
-            $('#arrow').hide();
-
-            //fading out navigation bullets
-            $('#pp-nav').fadeOut();
-
-            $('#section4').find('.content').animate({
-              top: '0%'
-            }, 700, 'easeInQuart');
-          }
-          if (index == 4) {
-            $('#arrow').show();
-            //fadding in navigation bullets
-            $('#pp-nav').fadeOut();
-
-            $('#section4 .content').animate({
-              top: '100%'
-            }, 700, 'easeInQuart');
-          }
-        }
-      });
-      $('#rightArrow').click(function() {
-        $.fn.pagepiling.moveSectionDown();
-      });
-      $('#leftArrow').click(function() {
-        $.fn.pagepiling.moveSectionUp();
-      });
-    });
-  </script>
-  <style>
-    /* Centered texts in each section
-		* --------------------------------------- */
-
-    .section {
-      text-align: center;
-    }
-
-    #section1 h1 {
-      color: #fff;
-    }
-
-    #infoMenu li a {
-      color: #fff;
-    }
-    #pp-nav {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
 <body>
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">
+            <img src="/images/machinelogowhite.png" id="altLogo" alt="Logo for the Machine">
+          </a>
+        </li>
+        <li data-menuanchor="page1" class="side-anchor" style="margin-top: 50%;"><a href="#page1">Home</a></li>
+        <li data-menuanchor="page2" class="side-anchor"><a href="#page2">About</a></li>
+        <li data-menuanchor="page3" class="side-anchor"><a href="#page3">Founders</a></li>
+        <li data-menuanchor="page4" class="side-anchor"><a href="#page4">Portfolio</a></li>
+      </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+  </div>
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <a href="#menu-toggle" id="menu-toggle">
+        <div id="menu-button">
+          <div id="hamburger">
+            <span class="menu"></span>
+            <span class="menu"></span>
+            <span class="menu"></span>
+          </div>
+          <div id="cross">
+            <span class="menu"></span>
+            <span class="menu"></span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
   <ul id="menu">
     <a href="#page1"><img src="/images/machinelogo.png" alt="Logo for the Machine"></a>
     <li data-menuanchor="page1" class="active"><a href="#page1" style="padding-left:10%">Home</a></li>
     <li data-menuanchor="page2"><a href="#page2">About</a></li>
-    <li data-menuanchor="page3"><a href="#page3">Our Team</a></li>
+    <li data-menuanchor="page3"><a href="#page3">Founders</a></li>
     <li data-menuanchor="page4"><a href="#page4">Portfolio</a></li>
   </ul>
-
+  <!-- Page Content -->
+  <!-- /#page-content-wrapper -->
   <div class="container">
     <button class="arrow" id="rightArrow"><span>&#8594;</span></button>
     <button class="arrow" id="leftArrow"><span>&#8592;</span></button>
@@ -107,8 +70,16 @@
 
   <div id="pagepiling">
     <div class="section" id="section1">
+      <iframe src="https://player.vimeo.com/video/147170777" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       <div class="layer">
-        <h1 class="line-1 anim-typewriter">Welcome To The Machine</h1>
+        <h1 class="line-1 anim-typewriter">Welcome To TheMachine</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+          <p class="text-center" style="margin: 0px 16%;">Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining is a
+            weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice, squeaky
+            clean. Cloth talk.</p>
+        </div>
       </div>
     </div>
     <div class="section" id="section2">
@@ -116,7 +87,7 @@
         <div class="topText">
           <div class="row">
             <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-              <h1>About The Machine</h1>
+              <h1>About TheMachine</h1>
               <p>A Management and Production firm focused on emerging talent, technologies and platforms.</p>
             </div>
           </div>
@@ -142,7 +113,7 @@
         <div class="topText">
           <div class="row">
             <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-              <h1>Our Team</h1>
+              <h1>Founders</h1>
               <p>A Management and Production firm focused on emerging talent, technologies and platforms.</p>
             </div>
           </div>
@@ -150,29 +121,23 @@
         <div class="bottomText">
           <div class="row">
 
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
               <div class="circle">
                 <img src="/images/heads/KevinHerrera_Head.png" alt="">
               </div>
-              <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
-                is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
-                squeaky clean. Cloth talk.</p>
+              <h4 class="text-center">KEVIN HERRERA | CEO</h4>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
               <div class="circle">
                 <img src="/images/heads/AaronJudovits_Head.png" alt="">
               </div>
-              <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
-                is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
-                squeaky clean. Cloth talk.</p>
+              <h4 class="text-center">AARON JUDOVITS | CFO</h4>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
               <div class="circle">
                 <img src="/images/heads/RawnErickson_Head.png" alt="">
               </div>
-              <p>Lorem Khaled Ipsum is a major key to success. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Wraith talk. We the best. Give thanks to the most high. You should never complain, complaining
-                is a weak emotion, you got life, we breathing, we blessed. Special cloth alert. Hammock talk come soon. The key to more success is to have a lot of pillows. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
-                squeaky clean. Cloth talk.</p>
+              <h4 class="text-center">RAWN ERICKSON, II | PRESIDENT</h4>
             </div>
           </div>
         </div>
@@ -215,7 +180,21 @@
       </div>
     </div>
   </div>
-
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="/lib/pagePiling.js/jquery.pagepiling.js"></script>
+  <script type="text/javascript" src="/js/masonry.js"></script>
+  <script type="text/javascript" src="/js/machine.js"></script>
+  <script type="text/javascript" src="/js/popper.js"></script>
+  <script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    $('#menu-button').click(function() {
+      $(this).toggleClass('open');
+    });
+  </script>
 </body>
 
 </html>
