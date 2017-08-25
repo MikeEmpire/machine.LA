@@ -10,11 +10,13 @@ var passport = require('passport');
 var path = require('path');
 var session = require('express-session');
 
+var keys = require('./config/keys');
+
 // Initialize express, port, and mongoose
 
 var app = express();
 var port = process.env.PORT || 3000;
-mongoose.connect('mongodb://admin:the_machine@ds034807.mlab.com:34807/the-machine');
+mongoose.connect(keys.mongoURI);
 
 // Routes
 
