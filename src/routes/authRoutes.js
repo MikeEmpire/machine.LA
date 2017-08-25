@@ -1,45 +1,59 @@
 var express = require('express');
-var authRouter = express.Router();
-var mongodb = require('mongodb').MongoClient;
+var router = express.Router();
 var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 
-var router = function() {
-  authRouter.route('/signUp').post(function(req, res) {
-    var url = 'mongodb://localhost:27017/libraryApp';
-    mongodb.connect(url, function(err, db) {
-      var collection = db.collection('users');
-      var user = {
-        username: req.body.userName,
-        password: req.body.password
-      };
+var User = require('../models/users');
 
-      collection.insert(user, function(err, results) {
-        if (err) {console.log(err);}
-        req.login(results.ops[0], function() {
-          res.redirect('/auth/profile');
+router.post('/signUp', function(req,res) {
+  var username = req.body.userName;
+  var password = req.body.password;
+});
+
+passport.use(new LocalStrategy(
+    function(username, password, done) {
+        User.getUserByUsername(username, function(err, user) {
+            if(err) throw err;
+            if(!user) {
+                return done(null, false, {message: 'Unknown User'});
+            }
+
+            User.comparePassword(password, user.password, function(err, isMatch) {
+                if(err) throw err;
+                if(isMatch) {
+                    return done(null, user);
+                } else {
+                    return done(null, false, {message: 'Invalid password'});
+                }
+            })
         });
-      });
-    });
-  });
+    }));
 
-  authRouter.route('/signIn')
-    .post(passport.authenticate('local', {
-      failureRedirect: '/'
-    }), function(req, res){
-      res.redirect('/auth/profile');
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+    User.getUserById(id, function(err, user) {
+        done(err, user);
+    });
+});
+
+function usernameToLowerCase(req, res, next) {
+    req.body.username = req.body.username.toLowerCase();
+    next();
+}
+
+router.post('/login', usernameToLowerCase,
+    passport.authenticate('local', {successRedirect: '/admin/profile', failureRedirect: '/admin/'}),
+    function(req, res) {
+        res.redirect('/admin/profile');
     });
 
-  authRouter.route('/profile')
-    .all(function(req, res, next) {
-      if (!req.user) {
-        res.redirect('/');
-      }
-      next();
-    })
-    .get(function(req, res) {
-      res.json(req.user);
-    });
-  return authRouter;
-};
+router.get('/logout', function(req, res) {
+   req.logout();
+
+   res.redirect('/');
+});
 
 module.exports = router;
