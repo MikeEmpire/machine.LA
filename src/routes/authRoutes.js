@@ -8,6 +8,24 @@ var User = require('../models/users');
 router.post('/signUp', function(req,res) {
   var username = req.body.userName;
   var password = req.body.password;
+
+  var newUser = new User({
+      name: name,
+      email: email,
+  });
+  User.getUserByUsername(username, function(err, user) {
+      if(err) throw err;
+      if(!user) {
+          User.createUser(newUser, function(err, user) {
+              if(err) throw err;
+              console.log(user);
+          });
+
+          res.redirect('/admin');
+      } else {
+          console.log('fail');
+      }
+  });
 });
 
 passport.use(new LocalStrategy(
