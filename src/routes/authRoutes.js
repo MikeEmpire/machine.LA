@@ -8,24 +8,35 @@ var User = require('../models/users');
 router.post('/signUp', function(req,res) {
   var username = req.body.userName;
   var password = req.body.password;
+  var password2 = req.body.password2;
 
-  var newUser = new User({
-      name: name,
-      email: email,
-  });
-  User.getUserByUsername(username, function(err, user) {
-      if(err) throw err;
-      if(!user) {
-          User.createUser(newUser, function(err, user) {
-              if(err) throw err;
-              console.log(user);
-          });
+  req.checkBody('username', 'Username is required').notEmpty();
+  req.checkBody('password', 'Password is required').notEmpty();
+  req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
 
-          res.redirect('/admin');
-      } else {
-          console.log('fail');
-      }
-  });
+  var errors = req.validationErrors();
+
+  if(errors) {
+    res.redirect('/admin');
+  } else {
+      var newUser = new User({
+        username: username,
+        email: email,
+    });
+    User.getUserByUsername(username, function(err, user) {
+        if(err) throw err;
+        if(!user) {
+            User.createUser(newUser, function(err, user) {
+                if(err) throw err;
+                console.log(user);
+            });
+
+            res.redirect('/admin');
+        } else {
+            res.redirect('/signUp');
+        }
+    });
+  }
 });
 
 passport.use(new LocalStrategy(

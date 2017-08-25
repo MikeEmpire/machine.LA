@@ -3,6 +3,7 @@
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var express = require('express');
+var expressValidator = require('express-validator');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var passport = require('passport');
@@ -39,6 +40,23 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Validator
+app.use(expressValidator({
+    errorFormatter: function(param, msg, value) {
+        var namespace = param.split('.'),
+            root = namespace.shift(),
+            formParam = root;
+
+        while(namespace.length) {
+            formParam += '[' + namespace.shift() + ']';
+        }
+        return {
+            param: formParam,
+            msg: msg,
+            value: value
+        };
+    }
+}));
 
 app.use('/Admin', adminRouter);
 app.use('/Auth', authRouter);
@@ -46,6 +64,10 @@ app.use('/Auth', authRouter);
 app.get('/', function(req, res) {
   res.render('index');
 });
+
+app.get('/signUp', function(req, res) {
+	res.render('signup');
+})
 
 app.listen(port, function(err) {
   console.log('running server on ' + port);
