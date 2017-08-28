@@ -6,23 +6,24 @@ var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/users');
 
 router.post('/signUp', function(req,res) {
-  var username = req.body.userName;
+    console.log(User);
+  var username = req.body.username;
   var password = req.body.password;
-  var password2 = req.body.password2;
 
   req.checkBody('username', 'Username is required').notEmpty();
   req.checkBody('password', 'Password is required').notEmpty();
-  req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
 
   var errors = req.validationErrors();
 
   if(errors) {
-    res.redirect('/admin');
+    res.redirect('/signup');
+    console.log(errors);
   } else {
       var newUser = new User({
         username: username,
-        email: email,
+        password: password
     });
+      console.log("get User By Username");
     User.getUserByUsername(username, function(err, user) {
         if(err) throw err;
         if(!user) {
@@ -30,7 +31,7 @@ router.post('/signUp', function(req,res) {
                 if(err) throw err;
                 console.log(user);
             });
-
+            console.log("no user");
             res.redirect('/admin');
         } else {
             res.redirect('/signUp');

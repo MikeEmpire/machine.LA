@@ -6,7 +6,7 @@ adminRouter.get('/', ensureAuthenticated, function(req, res) {
 });
 
 adminRouter.get('/profile', ensureAuthenticated, function(req, res) {
-  console.log('something happened');
+  res.render('admin');
 });
 
 function ensureAuthenticated(req, res, next) {
