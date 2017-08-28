@@ -1,34 +1,24 @@
 var express = require('express');
 var adminRouter = express.Router();
-var mongodb = require('mongodb').MongoClient;
-var passport = require('passport');
 
-var router = function(nav) {
-  adminRouter.route('/')
-      .post(passport.authenticate('local', {
-        // if login credentials don't correspond
-        failureRedirect: '/admin'
-      }), function(req, res) {
-      // if login credentials properly correspond
-      res.redirect('/admin/profile');
-      })
-      .get(function(req, res) {
-        res.render('signIn');
-      });
+adminRouter.get('/', ensureAuthenticated, function(req, res) {
+  res.redirect('/admin/profile');
+});
 
-  adminRouter.route('/profile')
-      .get(function(req, res) {
-        var url = 'mongodb://admin:the_machine@ds034807.mlab.com:34807/the-machine';
-        res.render('admin', {
-          username: req.user.username,
-          password: req.user.password
-        });
-      });
+adminRouter.get('/profile', ensureAuthenticated, function(req, res) {
+  res.render('admin');
+});
 
-  adminRouter.route('/profile/about')
-      .get(function(req, res) {
-        res.render('editabout')
-      });
-  return adminRouter;
-};
-module.exports = router;
+adminRouter.get('/profile/about', ensureAuthenticated, function(req, res) {
+  res.render('editabout');
+});
+
+function ensureAuthenticated(req, res, next) {
+  if(req.isAuthenticated()) {
+    return next();
+  } else {
+    res.render('signIn');
+  }
+}
+
+module.exports = adminRouter;
