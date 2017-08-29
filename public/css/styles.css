@@ -3,6 +3,22 @@ body {
   font-family: sans-serif, arial, helvetica;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+p {
+  font-family: 'Montserrat';
+}
+
+h1 {
+  font-family: 'Montserrat';
+}
+
 
 /* Centered texts in each section
 * --------------------------------------- */
@@ -25,13 +41,19 @@ body {
 /* Menu
  * --------------------------------------- */
 
+iframe {
+  margin-top: 9%;
+  height: 40%;
+  width: 60%;
+}
+
 ul#menu li {
   font-family: 'Montserrat';
   color: #000;
   background: #fff;
   background: rgba(255, 255, 255, 0.0);
-  margin-top: 3%;
-  margin-left: 15%;
+  margin-top: 7.7%;
+  margin-left: 4%;
   -moz-transition: all .2s ease-in;
   -o-transition: all .2s ease-in;
   -webkit-transition: all .2s ease-in;
@@ -95,10 +117,6 @@ img {
   background: white;
 }
 
-.layer {
-  margin-top: 8%;
-}
-
 #section1 {
   background-color: white;
 }
@@ -113,7 +131,7 @@ img {
   background-image: url('../images/machinelogo2.png');
   background-position: 21rem 5rem;
   background-repeat: no-repeat;
-  background-size: 130rem;
+  background-size: 80%;
 }
 
 #section4 .content {
@@ -124,7 +142,7 @@ img {
 
 
 /* Arrow
-	 * --------------------------------------- */
+--------------------------------------- */
 
 button#rightArrow {
   right: -10px;
@@ -177,6 +195,21 @@ button.arrow {
   color: #FFF;
 }
 
+/* Footer
+--------------------------------------- */
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+#footer li {
+  display: inline-block;
+  font-family: 'Montserrat';
+}
 
 /* Intro texts
 	 * --------------------------------------- */
@@ -277,14 +310,6 @@ button.arrow {
   }
 }
 
-p {
-  font-family: 'Montserrat';
-}
-
-h1 {
-  font-family: 'Montserrat';
-}
-
 .content {
   height: 100%;
   text-align: left;
@@ -300,7 +325,7 @@ h1 {
   font-family: 'Montaga';
   padding-left: 10%;
   padding-right: 10%;
-  font-size: smaller;
+  font-size: 1.7vw;
 }
 
 .circle {
@@ -319,14 +344,6 @@ h1 {
 
 h4.text-center {
   margin-top: 13%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
 }
 
 
@@ -396,95 +413,4 @@ body {
   font-size: 22px;
   z-index: 2;
   /* above items */
-}
-
-@media only screen and (min-width:960px) {
-  /* styles for browsers larger than 960px; */
-  ul#menu li {
-    display: inline-block;
-  }
-  div#page-content-wrapper {
-    display: none;
-  }
-}
-
-@media only screen and (min-width:1440px) {
-  /* styles for browsers larger than 1440px; */
-  ul#menu li {
-    display: inline-block;
-  }
-  div#page-content-wrapper {
-    display: none;
-  }
-}
-
-@media only screen and (min-width:2000px) {
-  /* for sumo sized (mac) screens */
-  ul#menu li {
-    display: inline-block;
-  }
-  div#page-content-wrapper {
-    display: none;
-  }
-}
-
-@media only screen and (max-device-width:480px) {
-  /* styles for mobile browsers smaller than 480px; (iPhone) */
-  ul#menu li {
-    display: none;
-  }
-  div#page-content-wrapper {
-    display: block;
-  }
-}
-
-@media only screen and (device-width:768px) {
-  /* default iPad screens */
-  ul#menu li {
-    display: none;
-  }
-  div#page-content-wrapper {
-    display: block;
-  }
-}
-
-
-/* different techniques for iPad screening */
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-  /* For portrait layouts only */
-  ul#menu li {
-    display: none;
-  }
-  div#page-content-wrapper {
-    display: block;
-  }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-  /* For landscape layouts only */
-  ul#menu li {
-    display: none;
-  }
-  div#page-content-wrapper {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .container {
-    width: 1370px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .container {
-    width: 1570px;
-  }
-}
-
-@media screen and (min-width: 1900px) {
-  .container {
-    width: 1870px;
-  }
 }
