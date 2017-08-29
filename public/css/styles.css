@@ -451,18 +451,8 @@ body {
 
 /* different techniques for iPad screening */
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
   /* For portrait layouts only */
-  ul#menu li {
-    display: none;
-  }
-  div#page-content-wrapper {
-    display: block;
-  }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-  /* For landscape layouts only */
   ul#menu li {
     display: none;
   }
@@ -488,3 +478,35 @@ body {
     width: 1870px;
   }
 }
+
+
+/*NEW*/
+
+@media screen and (max-width: 960px) {
+  #menu [data-menuanchor] {
+    display: none;
+  }
+
+  #menu img {
+    display: none;
+  }
+
+  #mobileLogo {
+    display: block;
+    margin: 0 auto;
+    position: static;
+    width: 20%;
+    margin-top: 2%;
+  }
+
+  #hamburger {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #mobileLogo {
+    display: none;
+  }
+}
+
