@@ -1,0 +1,159 @@
+/* iPhone 4 ----------- */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+  #section1, #section2, #section3 {
+    background-image: none;
+  }
+  ul#menu li {
+    display: none;
+  }
+  div#page-content-wrapper {
+    display: block;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+  #section1, #section2, #section3 {
+    background-image: none;
+  }
+  ul#menu li {
+    display: none;
+  }
+  div#page-content-wrapper {
+    display: block;
+  }
+}
+
+
+/* Smartphones (landscape) ----------- */
+
+@media only screen and (min-width: 321px) {
+  /* Styles */
+  #section1, #section2, #section3 {
+    background-image: none;
+  }
+  ul#menu li {
+    display: none;
+  }
+  div#page-content-wrapper {
+    display: block;
+  }
+}
+
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 320px) {
+  /* Styles */
+  #section1, #section2, #section3 {
+    background-image: none;
+  }
+  ul#menu li {
+    display: none;
+  }
+  div#page-content-wrapper {
+    display: block;
+  }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+  #section1, #section2, #section3 {
+    background-image: url('../images/machinelogo2.png');
+  }
+  ul#menu li {
+    display: inline-block;
+  }
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+  #section1, #section2, #section3 {
+    background-image: url('../images/machinelogo2.png');
+  }
+  ul#menu li {
+    display: inline-block;
+  }
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+
+
+/* iPads (portrait) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+  #section1, #section2, #section3 {
+    background-image: url('../images/machinelogo2.png');
+  }
+  ul#menu li {
+    display: inline-block;
+  }
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  #section1, #section2, #section3 {
+    background-image: url('../images/machinelogo2.png');
+  }
+  ul#menu li {
+    display: inline-block;
+  }
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+
+
+/* Large screens ----------- */
+
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+  #section1, #section2, #section3 {
+    background-image: url('../images/machinelogo2.png');
+  }
+  ul#menu li {
+    display: inline-block;
+  }
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1570px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .container {
+    width: 1870px;
+  }
+}
