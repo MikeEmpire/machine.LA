@@ -1,7 +1,6 @@
-/* iPhone 4 ----------- */
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* Styles */
+/*// Small screens*/
+@media only screen {
+  /* Define mobile styles */
   #section1, #section2, #section3 {
     background-image: none;
   }
@@ -13,10 +12,7 @@
   }
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Styles */
+@media only screen and (max-width: 40em) {
   #section1, #section2, #section3 {
     background-image: none;
   }
@@ -26,13 +22,10 @@
   div#page-content-wrapper {
     display: block;
   }
-}
+   } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
-
-/* Smartphones (landscape) ----------- */
-
-@media only screen and (min-width: 321px) {
-  /* Styles */
+/*// Medium screens*/
+@media only screen and (min-width: 40.063em) {
   #section1, #section2, #section3 {
     background-image: none;
   }
@@ -42,13 +35,9 @@
   div#page-content-wrapper {
     display: block;
   }
-}
+   } /* min-width 641px, medium screens */
 
-
-/* Smartphones (portrait) ----------- */
-
-@media only screen and (max-width: 320px) {
-  /* Styles */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
   #section1, #section2, #section3 {
     background-image: none;
   }
@@ -58,13 +47,10 @@
   div#page-content-wrapper {
     display: block;
   }
-}
-
-
-/* iPads (portrait and landscape) ----------- */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
+} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+/**/
+/*// Large screens*/
+@media only screen and (min-width: 64.063em) {
   #section1, #section2, #section3 {
     background-image: url('../images/machinelogo2.png');
   }
@@ -74,13 +60,9 @@
   div#page-content-wrapper {
     display: none;
   }
-}
+} /* min-width 1025px, large screens */
 
-
-/* iPads (landscape) ----------- */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
   #section1, #section2, #section3 {
     background-image: url('../images/machinelogo2.png');
   }
@@ -90,13 +72,10 @@
   div#page-content-wrapper {
     display: none;
   }
-}
+} /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 
-
-/* iPads (portrait) ----------- */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* Styles */
+/*// XLarge screens*/
+@media only screen and (min-width: 90.063em) {
   #section1, #section2, #section3 {
     background-image: url('../images/machinelogo2.png');
   }
@@ -106,13 +85,9 @@
   div#page-content-wrapper {
     display: none;
   }
-}
+} /* min-width 1441px, xlarge screens */
 
-
-/* Desktops and laptops ----------- */
-
-@media only screen and (min-width: 1224px) {
-  /* Styles */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
   #section1, #section2, #section3 {
     background-image: url('../images/machinelogo2.png');
   }
@@ -122,13 +97,10 @@
   div#page-content-wrapper {
     display: none;
   }
-}
+} /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 
-
-/* Large screens ----------- */
-
-@media only screen and (min-width: 1824px) {
-  /* Styles */
+/*// XXLarge screens*/
+@media only screen and (min-width: 120.063em) {
   #section1, #section2, #section3 {
     background-image: url('../images/machinelogo2.png');
   }
@@ -138,22 +110,4 @@
   div#page-content-wrapper {
     display: none;
   }
-}
-
-@media screen and (min-width: 1400px) {
-  .container {
-    width: 1370px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .container {
-    width: 1570px;
-  }
-}
-
-@media screen and (min-width: 1900px) {
-  .container {
-    width: 1870px;
-  }
-}
+} /* min-width 1921px, xxlarge screens */
