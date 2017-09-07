@@ -11,13 +11,13 @@ var passport = require('passport');
 var path = require('path');
 var session = require('express-session');
 
-var keys = require('./config/keys');
+// var keys = require('./config/keys');
 
 // Initialize express, port, and mongoose
 
 var app = express();
 var port = process.env.PORT || 3000;
-mongoose.connect(keys.mongoURI);
+// mongoose.connect(keys.mongoURI);
 
 // Routes
 
@@ -25,9 +25,12 @@ var adminRouter = require('./src/routes/adminRoutes');
 var authRouter = require('./src/routes/authRoutes');
 
 // Express code
+app.use(express.static(process.cwd() + "/public"));
 
-app.set('views', './src/views');
-app.set('view engine', 'ejs');
+var handlebars = require('express-handlebars');
+
+app.engine('handlebars', handlebars({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 app.use(cookieParser());
 app.use(express.static('public'));
