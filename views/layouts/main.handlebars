@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TheMachine</title>
+    <meta name="author" content="Michael Olie" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Website for TheMachine" />
+    <meta name="keywords" content="the,machine,themachine,michael,olie,marketing,talent,finder,los angeles" />
+    <meta name="Resource-type" content="Document" />
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <link rel="stylesheet" type="text/css" href="/lib/pagePiling.js/jquery.pagepiling.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/mediaqueries.css">
+  </head>
+
+  <body>
+    {{{ body }}}
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="/lib/pagePiling.js/jquery.pagepiling.js"></script>
+    <script type="text/javascript" src="/js/masonry.js"></script>
+    <script type="text/javascript" src="/js/machine.js"></script>
+    <script type="text/javascript" src="/js/popper.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+      $('#menu-button').click(function() {
+        $(this).toggleClass('open');
+      });
+    </script>
+  </body>
+
+</html>
