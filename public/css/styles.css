@@ -127,13 +127,6 @@ img {
   float: right;
 }
 
-#section1, #section2, #section3 {
-  background-image: url('../images/machinelogo2.png');
-  background-position: 21rem 5rem;
-  background-repeat: no-repeat;
-  background-size: 80%;
-}
-
 #section4 .content {
   top: 100%;
   position: absolute;
@@ -343,6 +336,7 @@ button.arrow {
 }
 
 h4.text-center {
+  font-size: 3.4vw;
   margin-top: 13%;
 }
 
