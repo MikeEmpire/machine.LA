@@ -52,7 +52,6 @@
 /*// Large screens*/
 @media only screen and (min-width: 64.063em) {
   #section1, #section2, #section3 {
-    background-image: url('../images/machinelogo2.png');
   }
   ul#menu li {
     display: inline-block;
@@ -64,7 +63,6 @@
 
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
   #section1, #section2, #section3 {
-    background-image: url('../images/machinelogo2.png');
   }
   ul#menu li {
     display: inline-block;
@@ -77,7 +75,6 @@
 /*// XLarge screens*/
 @media only screen and (min-width: 90.063em) {
   #section1, #section2, #section3 {
-    background-image: url('../images/machinelogo2.png');
   }
   ul#menu li {
     display: inline-block;
@@ -89,7 +86,6 @@
 
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   #section1, #section2, #section3 {
-    background-image: url('../images/machinelogo2.png');
   }
   ul#menu li {
     display: inline-block;
@@ -102,7 +98,6 @@
 /*// XXLarge screens*/
 @media only screen and (min-width: 120.063em) {
   #section1, #section2, #section3 {
-    background-image: url('../images/machinelogo2.png');
   }
   ul#menu li {
     display: inline-block;
