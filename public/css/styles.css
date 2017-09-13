@@ -109,6 +109,10 @@ img {
   margin: 0px;
 }
 
+/*#cross {
+  padding:15%;
+}*/
+
 
 /* Sections
 	* --------------------------------------- */
@@ -282,7 +286,7 @@ button.arrow {
 /* Animation */
 
 .anim-typewriter {
-  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 600ms steps(44) infinite normal;
 }
 
 @keyframes typewriter {
@@ -299,7 +303,7 @@ button.arrow {
     border-right-color: rgba(255, 255, 255, .75);
   }
   to {
-    border-right-color: transparent;
+    border-right-color: gray;
   }
 }
 
@@ -314,8 +318,14 @@ button.arrow {
 }
 
 #section2{
-  padding-top: 5%;
+  padding-top: 7%;
   padding-left: 5%;
+}
+
+#section3{
+  padding-top: 2%;
+  padding-right:3%;
+  padding-left:3%;
 }
 
 .bottomText p {
@@ -343,6 +353,9 @@ button.arrow {
 h4.text-center {
   font-size: 3.4vw;
   margin-top: 13%;
+}
+#founder {
+  font-size: 2.8vw;
 }
 
 
