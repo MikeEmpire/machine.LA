@@ -64,7 +64,7 @@ ul#menu li {
 #menu li.active {
   border-left-width: 4px;
   border-left-style: solid;
-  border-left-color: #ff4040;
+  border-left-color: #FFB6C7;
 }
 
 #menu li a {
@@ -179,7 +179,7 @@ button.arrow {
 }
 
 .arrow:hover {
-  background: rgba(255, 0, 0, 1);
+  background: #FFB6C7;
 }
 
 #leftArrow:hover span {
