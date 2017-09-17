@@ -25,7 +25,7 @@ var adminRouter = require('./src/routes/adminRoutes');
 var authRouter = require('./src/routes/authRoutes');
 
 // Express code
-app.use(express.static(process.cwd() + "/public"));
+app.use(express.static(process.cwd() + '/public'));
 
 var handlebars = require('express-handlebars');
 
@@ -83,7 +83,7 @@ app.get('/', function(req, res) {
 
 app.get('/signUp', function(req, res) {
 	res.render('signup');
-})
+});
 
 app.listen(port, function(err) {
   console.log('running server on ' + port);
