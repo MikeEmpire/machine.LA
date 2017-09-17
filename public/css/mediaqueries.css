@@ -25,7 +25,10 @@
   div#page-content-wrapper {
     display: block;
   }
+  #footer .row div ul {
+    padding-left: 0;
    } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+  }
 
 /*// Medium screens*/
 @media only screen and (min-width: 40.063em) {
