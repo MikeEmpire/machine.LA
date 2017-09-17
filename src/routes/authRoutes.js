@@ -23,7 +23,6 @@ router.post('/signUp', function(req,res) {
         username: username,
         password: password
     });
-      console.log("get User By Username");
     User.getUserByUsername(username, function(err, user) {
         if(err) throw err;
         if(!user) {
