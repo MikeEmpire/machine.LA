@@ -13,6 +13,9 @@
 }
 
 @media only screen and (max-width: 40em) {
+  .line-1 {
+    font-size: 1.4em;
+  }
   #section1, #section2, #section3 {
     background-image: none;
   }
@@ -26,6 +29,9 @@
 
 /*// Medium screens*/
 @media only screen and (min-width: 40.063em) {
+  h1 .line1 .anim-typewriter {
+    font-size: 1em;
+  }
   #section1, #section2, #section3 {
     background-image: none;
   }
