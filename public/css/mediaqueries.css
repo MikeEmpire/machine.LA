@@ -10,6 +10,9 @@
   div#page-content-wrapper {
     display: block;
   }
+  #footer {
+    background-color: #fff;
+  }
 }
 
 @media only screen and (max-width: 40em) {
@@ -44,7 +47,8 @@
   div#page-content-wrapper {
     display: block;
   }
-   } /* min-width 641px, medium screens */
+   /* min-width 641px, medium screens */
+  }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   #section1, #section2, #section3 {
