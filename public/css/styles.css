@@ -560,7 +560,7 @@ span.menu {
 }
 
 #menu-button {
-  z-index: 20;
+  z-index: 90;
   width: 100px;
   margin: 0px 80%;
   height: 100px;
@@ -677,9 +677,39 @@ span.menu {
   div#page-content-wrapper {
     display: block;
   }
+  #footer {
+    background-color: #fff;
+  }
+  #footer .row div ul {
+    padding-left: 0;
+  }
+  #menu-button {
+    margin: -10% 70%;
+  }
+  #menu-button #cross {
+    height: 50%;
+    width: 50%;
+  }
+  #menu-button #cross span:nth-child(1) {
+    width: 2px;
+    left: 80px;
+  }
+  #menu-button #cross span:nth-child(2) {
+    height: 2px;
+    left: 60px;
+    top: 25px;
+  }
+  #menu-button #hamburger span {
+    width: 30px;
+    height: 2px;
+    left: 50px;
+  }
 }
 
 @media only screen and (max-width: 40em) {
+  .line-1 {
+    font-size: 1.4em;
+  }
   .circle {
     padding-top: 5%;
   }
