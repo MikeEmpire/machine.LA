@@ -136,7 +136,7 @@ span.menu {
 }
 
 #menu-button {
-  z-index: 20;
+  z-index: 90;
   width: 100px;
   margin: 0px 90%;
   height: 100px;
