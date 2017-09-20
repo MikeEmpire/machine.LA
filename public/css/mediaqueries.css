@@ -13,6 +13,41 @@
   #footer {
     background-color: #fff;
   }
+  #menu-button {
+    margin: -10% 70%;
+  }
+  #menu-button #cross {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    transform: rotate(45deg);
+  }
+  #menu-button #cross span:nth-child(1) {
+    height: 0%;
+    width: 2px;
+    position: absolute;
+    top: 10%;
+    left: 80px;
+    transition-delay: 0s;
+  }
+
+  #menu-button #cross span:nth-child(2) {
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 60px;
+    top: 25px;
+    transition-delay: .25s;
+  }
+
+  #menu-button #hamburger span {
+      width: 30px;
+      height: 2px;
+      position: relative;
+      top: 24px;
+      left: 50px;
+      margin: 10px 0;
+    }
 }
 
 @media only screen and (max-width: 40em) {
@@ -59,6 +94,9 @@
   }
   div#page-content-wrapper {
     display: block;
+  }
+  #menu-button {
+    margin: 0% 80%;
   }
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 /**/
