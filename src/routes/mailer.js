@@ -28,7 +28,7 @@ export default function sendEmail(req, res) {
 
     // setup email data with unicode symbols
   const mailOptions = {
-    from: '"Node Mailer Contact" <>', // sender address
+    from: '"Node Mailer Contact" <samplesender.machine@gmail.com>', // sender address
     to: 'themachinemailersender@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
     text: 'Mail', // plain text body

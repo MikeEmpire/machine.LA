@@ -233,7 +233,7 @@ button.arrow {
 	 * --------------------------------------- */
 
 .header {
-  padding-top: 80px;
+  padding-top: 10%;
   text-align: center;
 }
 
@@ -328,6 +328,11 @@ button.arrow {
   padding-left:3%;
 }
 
+div.bar {
+  background: white;
+  color: white;
+}
+
 .bottomText p {
   padding-top: 10%;
   font-family: 'Montaga';
@@ -351,7 +356,7 @@ button.arrow {
 }
 
 h4.text-center {
-  font-size: 3.4vw;
+  font-size: 2vw;
   margin-top: 13%;
   font-family: 'Montaga';
 }
@@ -362,6 +367,17 @@ h4.text-center {
 
 #section5 h3 {
   font-family: 'Montserrat';
+}
+
+input.form-control {
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+label.control-label {
+  font-family: 'Montaga';
 }
 
 /* ---- grid ---- */
@@ -560,9 +576,9 @@ span.menu {
 }
 
 #menu-button {
-  z-index: 20;
+  z-index: 90;
   width: 100px;
-  margin: 0px 80%;
+  margin: 0px 90%;
   height: 100px;
   position: relative;
   cursor: pointer;
@@ -662,12 +678,10 @@ span.menu {
   text-align: center;
 }
 
+
 /*// Small screens*/
 @media only screen {
   /* Define mobile styles */
-  .circle {
-    padding-top: 5%;
-  }
   #section1, #section2, #section3 {
     background-image: none;
   }
@@ -677,11 +691,49 @@ span.menu {
   div#page-content-wrapper {
     display: block;
   }
+  #footer {
+    background-color: #fff;
+  }
+  #menu-button {
+    margin: -10% 70%;
+  }
+  #menu-button #cross {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    transform: rotate(45deg);
+  }
+  #menu-button #cross span:nth-child(1) {
+    height: 0%;
+    width: 2px;
+    position: absolute;
+    top: 10%;
+    left: 80px;
+    transition-delay: 0s;
+  }
+
+  #menu-button #cross span:nth-child(2) {
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 60px;
+    top: 25px;
+    transition-delay: .25s;
+  }
+
+  #menu-button #hamburger span {
+      width: 30px;
+      height: 2px;
+      position: relative;
+      top: 24px;
+      left: 50px;
+      margin: 10px 0;
+    }
 }
 
 @media only screen and (max-width: 40em) {
-  .circle {
-    padding-top: 5%;
+  .line-1 {
+    font-size: 1.4em;
   }
   #section1, #section2, #section3 {
     background-image: none;
@@ -692,15 +744,15 @@ span.menu {
   div#page-content-wrapper {
     display: block;
   }
+  #footer .row div ul {
+    padding-left: 0;
    } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+  }
 
 /*// Medium screens*/
 @media only screen and (min-width: 40.063em) {
-  h4.text-center {
-    font-size: 1.9vw;
-  }
-  #founder {
-    font-size: 1.9vw;
+  h1 .line1 .anim-typewriter {
+    font-size: 1em;
   }
   #section1, #section2, #section3 {
     background-image: none;
@@ -711,15 +763,10 @@ span.menu {
   div#page-content-wrapper {
     display: block;
   }
-} /* min-width 641px, medium screens */
+   /* min-width 641px, medium screens */
+  }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  h4.text-center {
-    font-size: 1.9vw;
-  }
-  #founder {
-    font-size: 1.9vw;
-  }
   #section1, #section2, #section3 {
     background-image: none;
   }
@@ -728,6 +775,9 @@ span.menu {
   }
   div#page-content-wrapper {
     display: block;
+  }
+  #menu-button {
+    margin: 0% 80%;
   }
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 /**/
@@ -744,11 +794,7 @@ span.menu {
 } /* min-width 1025px, large screens */
 
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  h4.text-center {
-    font-size: 1.9vw;
-  }
-  #founder {
-    font-size: 1.9vw;
+  #section1, #section2, #section3 {
   }
   ul#menu li {
     display: inline-block;
@@ -760,12 +806,6 @@ span.menu {
 
 /*// XLarge screens*/
 @media only screen and (min-width: 90.063em) {
-  h4.text-center {
-    font-size: 1.9vw;
-  }
-  #founder {
-    font-size: 1.9vw;
-  }
   #section1, #section2, #section3 {
   }
   ul#menu li {
@@ -777,12 +817,6 @@ span.menu {
 } /* min-width 1441px, xlarge screens */
 
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  h4.text-center {
-    font-size: 1.9vw;
-  }
-  #founder {
-    font-size: 1.9vw;
-  }
   #section1, #section2, #section3 {
   }
   ul#menu li {
@@ -795,12 +829,6 @@ span.menu {
 
 /*// XXLarge screens*/
 @media only screen and (min-width: 120.063em) {
-  h4.text-center {
-    font-size: 1.9vw;
-  }
-  #founder {
-    font-size: 1.9vw;
-  }
   #section1, #section2, #section3 {
   }
   ul#menu li {
