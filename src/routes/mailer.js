@@ -1,4 +1,5 @@
 export default function sendEmail(req, res) {
+  const nodemailer = require('nodemailer');
   /* eslint-disable no-console */
   const output = `
     <p>You have a new contact request</p>
@@ -14,16 +15,12 @@ export default function sendEmail(req, res) {
 
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    service: "gmail",
+    host: "smtp.gmail.com",
     auth: {
       user: 'themachinemailersender@gmail.com', // generated ethereal user
       pass: 'TheMachine', // generated ethereal password
-    },
-    tls: {
-      rejectUnauthorized: false,
-    },
+    }
   });
 
     // setup email data with unicode symbols
