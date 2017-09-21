@@ -694,10 +694,17 @@ span.menu {
   #footer {
     background-color: #fff;
   }
+<<<<<<< HEAD
+=======
+  #footer .row div ul {
+    padding-left: 0;
+  }
+>>>>>>> b90ebf90f72256755bcafc49552c31320d471f8d
   #menu-button {
     margin: -10% 70%;
   }
   #menu-button #cross {
+<<<<<<< HEAD
     position: absolute;
     height: 50%;
     width: 50%;
@@ -729,11 +736,36 @@ span.menu {
       left: 50px;
       margin: 10px 0;
     }
+=======
+    height: 50%;
+    width: 50%;
+  }
+  #menu-button #cross span:nth-child(1) {
+    width: 2px;
+    left: 80px;
+  }
+  #menu-button #cross span:nth-child(2) {
+    height: 2px;
+    left: 60px;
+    top: 25px;
+  }
+  #menu-button #hamburger span {
+    width: 30px;
+    height: 2px;
+    left: 50px;
+  }
+>>>>>>> b90ebf90f72256755bcafc49552c31320d471f8d
 }
 
 @media only screen and (max-width: 40em) {
   .line-1 {
     font-size: 1.4em;
+<<<<<<< HEAD
+=======
+  }
+  .circle {
+    padding-top: 5%;
+>>>>>>> b90ebf90f72256755bcafc49552c31320d471f8d
   }
   #section1, #section2, #section3 {
     background-image: none;
