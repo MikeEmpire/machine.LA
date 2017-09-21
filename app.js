@@ -1,33 +1,36 @@
 // Import all necessary files
 
-var bodyParser = require('body-parser');
-var cookieParser = require('cookie-parser');
-var express = require('express');
-var expressValidator = require('express-validator');
-var flash = require('connect-flash');
-var mongo = require('mongodb');
-var mongoose = require('mongoose');
-var passport = require('passport');
-var path = require('path');
-var session = require('express-session');
-
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
+import express from 'express';
+import expressValidator from 'express-validator';
+import flash from 'connect-flash';
+import mongo from 'mongodb';
+import mongoose from 'mongoose';
+import passport from 'passport';
+import path from 'path';
+import session from 'express-session';
+import compression from 'compression';
+import sendMail from './src/routes/mailer';
 // var keys = require('./config/keys');
 
 // Initialize express, port, and mongoose
 
-var app = express();
-var port = process.env.PORT || 3000;
+const app = express();
+const port = process.env.PORT || 3000;
 // mongoose.connect(keys.mongoURI);
 
 // Routes
 
-var adminRouter = require('./src/routes/adminRoutes');
-var authRouter = require('./src/routes/authRoutes');
+const adminRouter = require('./src/routes/adminRoutes');
+const authRouter = require('./src/routes/authRoutes');
 
+// Compress static files
+app.use(compression());
 // Express code
-app.use(express.static(process.cwd() + '/public'));
+app.use(express.static(`${process.cwd()}/public`));
 
-var handlebars = require('express-handlebars');
+import handlebars from 'express-handlebars';
 
 app.engine('handlebars', handlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
@@ -54,7 +57,7 @@ app.use(expressValidator({
             formParam = root;
 
         while(namespace.length) {
-            formParam += '[' + namespace.shift() + ']';
+            formParam += `[${namespace.shift()}]`;
         }
         return {
             param: formParam,
@@ -66,7 +69,7 @@ app.use(expressValidator({
 
 app.use(flash());
 
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
     res.locals.error = req.flash('error');
@@ -77,14 +80,16 @@ app.use(function(req, res, next) {
 app.use('/Admin', adminRouter);
 app.use('/Auth', authRouter);
 
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/signUp', function(req, res) {
+app.get('/signUp', (req, res) => {
 	res.render('signup');
 });
 
-app.listen(port, function(err) {
-  console.log('running server on ' + port);
+app.post('/send', sendMail);
+
+app.listen(port, err => {
+  console.log(`running server on ${port}`);
 });

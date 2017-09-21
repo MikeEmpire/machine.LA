@@ -7,9 +7,10 @@
           <img src="/images/machinelogowhite.png" id="altLogo" alt="Logo for the Machine">
         </a>
       </li>
-      <li data-menuanchor="page1" class="side-anchor" style="margin-top: 50%;"><a href="#page1">Home</a></li>
-      <li data-menuanchor="page2" class="side-anchor"><a href="#page2">About</a></li>
-      <li data-menuanchor="page3" class="side-anchor"><a href="#page3">Humans</a></li>
+      <li data-menuanchor="home" class="side-anchor" style="margin-top: 50%;"><a href="#home">Home</a></li>
+      <li data-menuanchor="about" class="side-anchor"><a href="#about">About</a></li>
+      <li data-menuanchor="humans" class="side-anchor"><a href="#humans">Humans</a></li>
+      <li class="side-anchor" data-menuanchor="page5"><a href="#contact">Contact</a></li>
       {{!-- <li data-menuanchor="page4" class="side-anchor"><a href="#page4">Portfolio</a></li> --}}
     </ul>
   </div>
@@ -37,10 +38,11 @@
 <!-- /#page-content-wrapper -->
 
 <ul id="menu">
-  <a href="#page1"><img src="/images/machinelogo.png" alt="Logo for the Machine"></a>
-  <li data-menuanchor="page1" class="active" style="margin-left:20%;"><a href="#page1" style="padding-left:10%;">Home</a></li>
-  <li data-menuanchor="page2"><a href="#page2">About</a></li>
-  <li data-menuanchor="page3"><a href="#page3">Humans</a></li>
+  <a href="#home"><img src="/images/machinelogo.png" alt="Logo for the Machine"></a>
+  <li data-menuanchor="home" class="active" style="margin-left:20%;"><a href="#home" style="padding-left:10%;">Home</a></li>
+  <li data-menuanchor="about"><a href="#about">About</a></li>
+  <li data-menuanchor="humans"><a href="#humans">Humans</a></li>
+  <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
 {{!--   <li data-menuanchor="page4"><a href="#page4">Portfolio</a></li> --}}
 </ul>
 <!-- Page Content -->
@@ -105,8 +107,8 @@
       <div class="topText">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-    
-          
+
+
           </div>
         </div>
       </div>
@@ -137,8 +139,67 @@
             </div>
             <h4 class="text-center">DIANA JUDOVITS<br><div id="founder">FOUNDER<br></div>CSO</h4>
           </div>
+          <div class="col-xs-12 col-sm-12">
+            <div class="bar">
+              <ul>
+                <li>what</li>
+                <li>what</li>
+                <li>what</li>
+                <li>what</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="section pp-scrollable" id="section5">
+    <div class="content">
+      <div class="header">
+        <h3>Contact Us</h3>
+      </div>
+      <div class=" col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="cform" id="contact-form">
+						<div id="errormessage"></div>
+						<form id="contactForm" action="/send" method="post" class="form-horizontal">
+							<div class="form-group">
+								<label for="name" class="col-md-3 control-label">Full Name</label>
+								<div class="col-md-6">
+									<input placeholder="Your name" type="text" class="form-control" id="name" name="name" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email" class="col-md-3 control-label">Email</label>
+								<div class="col-md-6">
+									<input type="email" id="email" class="form-control" name="email" placeholder="Your Email" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-3 control-label">Subject</label>
+								<div class="col-md-6">
+									<input type="text" class="form-control" name="subject" placeholder="Subject of E-Mail" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-3 control-label">Content</label>
+								<div class="col-md-6">
+									<textarea class="form-control" name="content" rows="5"></textarea>
+								</div>
+							</div>
+							<!-- #messages is where the messages are placed inside -->
+							<div class="form-group">
+								<div class="col-md-9 col-md-offset-3">
+									<div id="messages"></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-9 col-md-offset-3">
+									<button type="submit" class="btn btn-theme">Send</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
     </div>
   </div>
 {{!--   <div class="section pp-scrollable" id="section4">
