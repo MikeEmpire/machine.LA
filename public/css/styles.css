@@ -109,6 +109,7 @@ img {
   margin: 0px;
 }
 
+
 /*#cross {
   padding:15%;
 }*/
@@ -192,6 +193,7 @@ button.arrow {
   color: #FFF;
 }
 
+
 /* Footer
 --------------------------------------- */
 
@@ -207,6 +209,7 @@ button.arrow {
   display: inline-block;
   font-family: 'Montserrat';
 }
+
 
 /* Intro texts
 	 * --------------------------------------- */
@@ -317,15 +320,15 @@ button.arrow {
   padding-left: 5%;
 }
 
-#section2{
+#section2 {
   padding-top: 7%;
   padding-left: 5%;
 }
 
-#section3{
+#section3 {
   padding-top: 2%;
-  padding-right:3%;
-  padding-left:3%;
+  padding-right: 3%;
+  padding-left: 3%;
 }
 
 div.bar {
@@ -360,13 +363,17 @@ h4.text-center {
   margin-top: 13%;
   font-family: 'Montaga';
 }
+
 #founder {
   font-size: 2.8vw;
 }
 
 
+/*  CONTACT PAGE */
+
 #section5 h3 {
   font-family: 'Montserrat';
+  margin-bottom: 6%;
 }
 
 input.form-control {
@@ -377,8 +384,14 @@ input.form-control {
 }
 
 label.control-label {
+  font-family: 'Montserrat';
+  text-align: left;
+}
+
+small.help-block {
   font-family: 'Montaga';
 }
+
 
 /* ---- grid ---- */
 
@@ -578,7 +591,7 @@ span.menu {
 #menu-button {
   z-index: 90;
   width: 100px;
-  margin: 0px 90%;
+  margin: 0px 80%;
   height: 100px;
   position: relative;
   cursor: pointer;
@@ -680,6 +693,7 @@ span.menu {
 
 
 /*// Small screens*/
+
 @media only screen {
   /* Define mobile styles */
   #section1, #section2, #section3 {
@@ -694,18 +708,14 @@ span.menu {
   #footer {
     background-color: #fff;
   }
-<<<<<<< HEAD
-=======
-  #footer .row div ul {
+  <<<<<<< HEAD=======#footer .row div ul {
     padding-left: 0;
   }
->>>>>>> b90ebf90f72256755bcafc49552c31320d471f8d
-  #menu-button {
+  >>>>>>>b90ebf90f72256755bcafc49552c31320d471f8d #menu-button {
     margin: -10% 70%;
   }
   #menu-button #cross {
-<<<<<<< HEAD
-    position: absolute;
+    <<<<<<< HEAD position: absolute;
     height: 50%;
     width: 50%;
     transform: rotate(45deg);
@@ -718,7 +728,6 @@ span.menu {
     left: 80px;
     transition-delay: 0s;
   }
-
   #menu-button #cross span:nth-child(2) {
     width: 0%;
     height: 2px;
@@ -727,146 +736,168 @@ span.menu {
     top: 25px;
     transition-delay: .25s;
   }
-
-  #menu-button #hamburger span {
-      width: 30px;
-      height: 2px;
-      position: relative;
-      top: 24px;
-      left: 50px;
-      margin: 10px 0;
-    }
-=======
-    height: 50%;
-    width: 50%;
-  }
-  #menu-button #cross span:nth-child(1) {
-    width: 2px;
-    left: 80px;
-  }
-  #menu-button #cross span:nth-child(2) {
-    height: 2px;
-    left: 60px;
-    top: 25px;
-  }
   #menu-button #hamburger span {
     width: 30px;
     height: 2px;
+    position: relative;
+    top: 24px;
     left: 50px;
+    margin: 10px 0;
   }
->>>>>>> b90ebf90f72256755bcafc49552c31320d471f8d
+  =======height: 50%;
+  width: 50%;
 }
 
+#menu-button #cross span:nth-child(1) {
+  width: 2px;
+  left: 80px;
+}
+
+#menu-button #cross span:nth-child(2) {
+  height: 2px;
+  left: 60px;
+  top: 25px;
+}
+
+#menu-button #hamburger span {
+  width: 30px;
+  height: 2px;
+  left: 50px;
+}
+
+>>>>>>>b90ebf90f72256755bcafc49552c31320d471f8d
+}
 @media only screen and (max-width: 40em) {
   .line-1 {
     font-size: 1.4em;
-<<<<<<< HEAD
-=======
+    <<<<<<< HEAD=======
   }
+
   .circle {
     padding-top: 5%;
->>>>>>> b90ebf90f72256755bcafc49552c31320d471f8d
+    >>>>>>>b90ebf90f72256755bcafc49552c31320d471f8d
   }
+
   #section1, #section2, #section3 {
     background-image: none;
   }
+
   ul#menu li {
     display: none;
   }
+
   div#page-content-wrapper {
     display: block;
   }
+
   #footer .row div ul {
     padding-left: 0;
-   } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
   }
+  /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+}
 
 /*// Medium screens*/
 @media only screen and (min-width: 40.063em) {
   h1 .line1 .anim-typewriter {
     font-size: 1em;
   }
+
   #section1, #section2, #section3 {
     background-image: none;
   }
+
   ul#menu li {
     display: none;
   }
+
   div#page-content-wrapper {
     display: block;
   }
-   /* min-width 641px, medium screens */
-  }
-
+  /* min-width 641px, medium screens */
+}
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   #section1, #section2, #section3 {
     background-image: none;
   }
+
   ul#menu li {
     display: none;
   }
+
   div#page-content-wrapper {
     display: block;
   }
+
   #menu-button {
     margin: 0% 80%;
   }
-} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+}
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
 /**/
+
 /*// Large screens*/
 @media only screen and (min-width: 64.063em) {
-  #section1, #section2, #section3 {
-  }
-  ul#menu li {
-    display: inline-block;
-  }
-  div#page-content-wrapper {
-    display: none;
-  }
-} /* min-width 1025px, large screens */
+  #section1, #section2, #section3 {}
 
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  #section1, #section2, #section3 {
-  }
   ul#menu li {
     display: inline-block;
   }
+
   div#page-content-wrapper {
     display: none;
   }
-} /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+}
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  #section1, #section2, #section3 {}
+
+  ul#menu li {
+    display: inline-block;
+  }
+
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 
 /*// XLarge screens*/
 @media only screen and (min-width: 90.063em) {
-  #section1, #section2, #section3 {
-  }
-  ul#menu li {
-    display: inline-block;
-  }
-  div#page-content-wrapper {
-    display: none;
-  }
-} /* min-width 1441px, xlarge screens */
+  #section1, #section2, #section3 {}
 
-@media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  #section1, #section2, #section3 {
-  }
   ul#menu li {
     display: inline-block;
   }
+
   div#page-content-wrapper {
     display: none;
   }
-} /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+}
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+  #section1, #section2, #section3 {}
+
+  ul#menu li {
+    display: inline-block;
+  }
+
+  div#page-content-wrapper {
+    display: none;
+  }
+}
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 
 /*// XXLarge screens*/
 @media only screen and (min-width: 120.063em) {
-  #section1, #section2, #section3 {
-  }
+  #section1, #section2, #section3 {}
+
   ul#menu li {
     display: inline-block;
   }
+
   div#page-content-wrapper {
     display: none;
   }
-} /* min-width 1921px, xxlarge screens */
+}
+/* min-width 1921px, xxlarge screens */
