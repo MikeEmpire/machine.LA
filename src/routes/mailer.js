@@ -10,7 +10,7 @@ export default function sendEmail(req, res) {
       <li>Subject: ${req.body.subject}</li>
     </ul>
     <h3>Message</h3>
-    <p>${req.body.message}</p>
+    <p>${req.body.content}</p>
    `;
 
   // create reusable transporter object using the default SMTP transport
