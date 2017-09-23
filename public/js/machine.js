@@ -87,11 +87,11 @@ $(document).ready(function() {
       subject: {
         validators: {
           notEmpty: {
-            message: 'The title is required and cannot be empty'
+            message: 'The subject is required and cannot be empty'
           },
           stringLength: {
             max: 100,
-            message: 'The title must be less than 100 characters long'
+            message: 'The subject must be less than 100 characters long'
           }
         }
       },
@@ -109,15 +109,13 @@ $(document).ready(function() {
     }
   });
 
-  var name,
-    email,
-    subject,
-    text;
+  var name, email, subject, text;
+  
   $("#send_email").click(function() {
     name = $("#name").val();
     email = $("#email").val();
     subject = $("#subject").val();
-    text = $("#message").val();
+    text = $("#content").val();
     $("#message").text("Sending E-mail...Please wait");
     $.get("http://localhost:3000/send", {
       name: name,
