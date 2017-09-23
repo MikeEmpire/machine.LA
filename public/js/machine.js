@@ -110,7 +110,7 @@ $(document).ready(function() {
   });
 
   var name, email, subject, text;
-  
+
   $("#send_email").click(function() {
     name = $("#name").val();
     email = $("#email").val();
