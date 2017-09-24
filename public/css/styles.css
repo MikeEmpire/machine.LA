@@ -278,7 +278,7 @@ button.arrow {
   width: 24em;
   margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, .75);
-  font-size: 180%;
+  font-size: 150%;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -696,6 +696,12 @@ span.menu {
 
 @media only screen {
   /* Define mobile styles */
+  button#rightArrow {
+    right: -30px;
+  }
+  button.arrow {
+    width: 70px;
+  }
   #section1, #section2, #section3 {
     background-image: none;
   }
@@ -798,6 +804,12 @@ span.menu {
 
 /*// Medium screens*/
 @media only screen and (min-width: 40.063em) {
+  button#rightArrow {
+    right: -10px;
+  }
+  button.arrow {
+    width: 100px;
+  }
   h1 .line1 .anim-typewriter {
     font-size: 1em;
   }
