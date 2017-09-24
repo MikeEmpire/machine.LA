@@ -392,7 +392,9 @@ small.help-block {
   font-family: 'Montaga';
 }
 
-
+#content-label {
+  font-size: small;
+}
 /* ---- grid ---- */
 
 .grid {
