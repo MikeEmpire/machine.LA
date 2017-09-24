@@ -9,6 +9,10 @@ $(document).ready(function() {
   $('#menu-button').click(function() {
     $(this).toggleClass('open');
   });
+  $('.side-anchor').click(function() {
+    $("#wrapper").toggleClass("toggled");
+    $("#menu-button").toggleClass('open');
+  });
 
   $('#pagepiling').pagepiling({
     direction: 'horizontal',
