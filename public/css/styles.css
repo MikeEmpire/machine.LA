@@ -530,6 +530,26 @@ small.help-block {
   color: #999999;
 }
 
+button.btn.btn-theme {
+    background: black;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 7px;
+    box-shadow: 0 5px darkslategrey;
+    padding: 10px 16px 10px 16px;
+}
+
+button.btn.btn-theme:active {
+    background: darkslategrey;
+}
+
+button.btn.btn-theme:disabled {
+    background: darkslategrey;
+    box-shadow: 0px 0px;
+}
+
 .sidebar-nav li a:hover {
   text-decoration: none;
   color: #fff;
@@ -698,11 +718,14 @@ span.menu {
 
 @media only screen {
   /* Define mobile styles */
+
   button#rightArrow {
-    right: -30px;
+    right: -10px;
+    width: 53px;
   }
-  button.arrow {
-    width: 70px;
+
+  #rightArrow span {
+    left: 0px;
   }
   #section1, #section2, #section3 {
     background-image: none;
@@ -781,6 +804,10 @@ span.menu {
     <<<<<<< HEAD=======
   }
 
+  button#rightArrow {
+    width: 100px;
+  }
+
   .circle {
     padding-top: 5%;
     >>>>>>>b90ebf90f72256755bcafc49552c31320d471f8d
@@ -807,9 +834,6 @@ span.menu {
 /*// Medium screens*/
 @media only screen and (min-width: 40.063em) {
   button#rightArrow {
-    right: -10px;
-  }
-  button.arrow {
     width: 100px;
   }
   h1 .line1 .anim-typewriter {
@@ -818,6 +842,10 @@ span.menu {
 
   #section1, #section2, #section3 {
     background-image: none;
+  }
+
+  button#rightArrow {
+    width: 100px;
   }
 
   ul#menu li {
@@ -842,6 +870,10 @@ span.menu {
     display: block;
   }
 
+  button#rightArrow {
+    width: 100px;
+  }
+
   #menu-button {
     margin: 0% 80%;
   }
@@ -858,6 +890,10 @@ span.menu {
     display: inline-block;
   }
 
+  button#rightArrow {
+    width: 100px;
+  }
+
   div#page-content-wrapper {
     display: none;
   }
@@ -868,6 +904,10 @@ span.menu {
 
   ul#menu li {
     display: inline-block;
+  }
+
+  button#rightArrow {
+    width: 100px;
   }
 
   div#page-content-wrapper {
@@ -887,6 +927,10 @@ span.menu {
   div#page-content-wrapper {
     display: none;
   }
+
+  button#rightArrow {
+    width: 100px;
+  }
 }
 /* min-width 1441px, xlarge screens */
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
@@ -894,6 +938,10 @@ span.menu {
 
   ul#menu li {
     display: inline-block;
+  }
+
+  button#rightArrow {
+    width: 100px;
   }
 
   div#page-content-wrapper {
@@ -912,6 +960,10 @@ span.menu {
 
   div#page-content-wrapper {
     display: none;
+  }
+
+  button#rightArrow {
+    width: 100px;
   }
 }
 /* min-width 1921px, xxlarge screens */
