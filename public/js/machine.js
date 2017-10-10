@@ -18,13 +18,13 @@ $(document).ready(function() {
     direction: 'horizontal',
     menu: '#menu',
     anchors: [
-      'home', 'about', 'humans', 'contact'
+      'home', 'about', 'humans', 'contact', 'theark'
     ],
     navigation: {
       'textColor': '#f2f2f2',
       'bulletsColor': '#ccc',
       'position': 'right',
-      'tooltips': ['Home', 'About', 'Humans', 'Contact']
+      'tooltips': ['Home', 'About', 'Humans', 'Contact', 'TheArk']
     },
     onLeave: function(index, nextIndex, direction) {
 
@@ -35,22 +35,22 @@ $(document).ready(function() {
       $('.section').eq(nextIndex - 1).find('h1, p').fadeIn(700, 'easeInQuart');
 
       //reaching our last section? The one with our normal site?
-      if (nextIndex == 4) {
-        $('#arrow').hide();
+      if (nextIndex == 5) {
+        $('#rightArrow').hide();
 
         //fading out navigation bullets
         $('#pp-nav').fadeOut();
 
-        $('#section4').find('.content').animate({
+        $('#section6').find('.content').animate({
           top: '0%'
         }, 700, 'easeInQuart');
       }
-      if (index == 4) {
-        $('#arrow').show();
+      if (index == 5) {
+        $('#rightArrow').show();
         //fadding in navigation bullets
         $('#pp-nav').fadeOut();
 
-        $('#section4 .content').animate({
+        $('#section6 .content').animate({
           top: '100%'
         }, 700, 'easeInQuart');
       }
