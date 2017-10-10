@@ -714,18 +714,19 @@ span.menu {
   text-align: center;
 }
 
-#section6 div.header span {
-  font-family: 'Montaga'
-}
-
 p.message {
   margin-top: 21%;
-  text-align: center;
 }
 
 .newSection {
   height: 100vh;
   width: 100%;
+}
+
+#section6 h5, p {
+    font-size: 2.5vw;
+    text-align: center;
+    font-family: 'Montaga';
 }
 /*// Small screens*/
 
