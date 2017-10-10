@@ -715,7 +715,8 @@ span.menu {
 }
 
 p.message {
-  margin-top: 21%;
+  margin-top: 31%;
+  font-size: 2rem;
 }
 
 .newSection {
@@ -724,9 +725,26 @@ p.message {
 }
 
 #section6 h5, p {
-    font-size: 2.5vw;
+    font-size: 2.3rem;
     text-align: center;
     font-family: 'Montaga';
+}
+
+.box {
+  max-width: 100vw;
+  line-height: 1.5;
+  transform: translateY(-50%);
+}
+
+.source {
+  color: skyblue;
+  margin: 0 auto;
+}
+
+#quote{
+  -webkit-transform: translate3d(0, 0, 0);
+  line-height:36px;
+  color: black;
 }
 /*// Small screens*/
 
