@@ -77,17 +77,12 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-
 // app.get('/signUp', (req, res) => {
 // 	res.render('signup');
 // });
 
 app.post('/send', sendMail);
-app.post('/news', (req, res) => {
-  addEmailToMailChimp(req.body.email);
-  console.log('MailChimp success');
-  return res.render('index');
-});
+app.post('/news', addEmailToMailChimp);
 
 app.get('*', (req,res) => {
     res.redirect('/');
