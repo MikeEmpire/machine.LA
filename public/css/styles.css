@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montaga|Montserrat:600');
+@import url('https://fonts.googleapis.com/css?family=Montaga|Montserrat:400,600');
 body {
   font-family: sans-serif, arial, helvetica;
 }
@@ -243,12 +243,13 @@ button.arrow {
 .header h1 {
   font-size: 5em;
   font-weight: bold;
-  color: #fff;
 }
 
 .header p {
-  color: #f2f2f2;
-  font-size: 1.7em;
+  color: black;
+  font-size: 2.1em;
+  font-weight: 400;
+  margin-top: 20%;
 }
 
 .page {
@@ -713,6 +714,92 @@ span.menu {
   text-align: center;
 }
 
+p.message {
+  margin-top: 31%;
+  font-size: 2rem;
+  font-family: 'Montserrat'
+}
+
+.newSection {
+  height: 100vh;
+  width: 100%;
+}
+
+#section6 h3, h5, h6, p {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Montaga';
+    letter-spacing: 1px;
+}
+
+.box {
+  max-width: 100vw;
+  line-height: 1.5;
+}
+
+.source {
+  color: skyblue;
+  margin: 0 auto;
+}
+
+#quote{
+  -webkit-transform: translate3d(0, 0, 0);
+  line-height:36px;
+  color: black;
+}
+
+span#brand {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.float {
+  margin: 20% 0;
+  animation: levitate 1.2s alternate ease-in-out infinite;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 20px);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+#section6 button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#section6 button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.fill {
+  --color: #778899;
+  --hover: #000;
+}
 
 /*// Small screens*/
 
@@ -796,12 +883,13 @@ span.menu {
   left: 50px;
 }
 
->>>>>>>b90ebf90f72256755bcafc49552c31320d471f8d
-}
 @media only screen and (max-width: 40em) {
+  .header h1 {
+    margin-top: 25%;
+  }
+
   .line-1 {
     font-size: 1.4em;
-    <<<<<<< HEAD=======
   }
 
   button#rightArrow {
