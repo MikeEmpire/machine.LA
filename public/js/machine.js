@@ -17,7 +17,7 @@ $(document).ready(function() {
   var scene = new ScrollMagic.Scene({
     triggerElement: '#page2',
     duration: 300,
-    offset: 50
+    offset: -250
   })
   .setTween(tl)
   .addTo(controller)
@@ -158,6 +158,20 @@ $(document).ready(function() {
     email,
     subject,
     text;
+
+  $('#newsForm').submit(function(e) {
+    e.preventDefault();
+    email = $('#newsEmail').val();
+    console.log(email);
+    $.post("http://localhost:3000/news", {
+      email: email
+    }, function(data) {
+      if (data == 'sent') {
+        console.log(data);
+        $("#message").empty().html("Email is been sent at " + to + ".Please check inbox!");
+      }
+    })
+  });
 
   $("#send_email").click(function() {
     name = $("#name").val();
