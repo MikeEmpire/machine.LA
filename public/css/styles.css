@@ -755,7 +755,7 @@ span#brand {
 }
 
 .float {
-  margin: 30% 0;
+  margin: 20% 0;
   animation: levitate 1.2s alternate ease-in-out infinite;
 }
 
@@ -767,6 +767,40 @@ span#brand {
     transform: translate(0, 20px);
   }
 }
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+#section6 button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#section6 button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.fill {
+  --color: #778899;
+  --hover: #000;
+}
+
 /*// Small screens*/
 
 @media only screen {
