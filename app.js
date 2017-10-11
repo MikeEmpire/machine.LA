@@ -77,12 +77,17 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+
 // app.get('/signUp', (req, res) => {
-//   res.render('signup');
+// 	res.render('signup');
 // });
 
 app.post('/send', sendMail);
 app.post('/news', addEmailToMailChimp);
+
+app.get('*', (req,res) => {
+    res.redirect('/');
+});
 
 app.listen(port, err => {
   console.log(`running server on ${port}`);

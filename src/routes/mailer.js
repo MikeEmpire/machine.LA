@@ -13,6 +13,8 @@ export default function sendEmail(req, res) {
     <p>${req.body.content}</p>
    `;
 
+  console.log(output);
+
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
     service: "gmail",
