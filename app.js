@@ -77,7 +77,6 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-
 // app.get('/signUp', (req, res) => {
 // 	res.render('signup');
 // });
