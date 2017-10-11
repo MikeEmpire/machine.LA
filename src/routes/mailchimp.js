@@ -1,4 +1,4 @@
-export default function addEmailToMailChimp(email) {
+export default function addEmailToMailChimp(req, res) {
   var request = require("request");
 
   var options = {
@@ -11,7 +11,7 @@ export default function addEmailToMailChimp(email) {
       'content-type': 'application/json'
     },
     body: {
-      email_address: email,
+      email_address: req.body.email,
       status: 'subscribed'
     },
     json: true
@@ -20,6 +20,8 @@ export default function addEmailToMailChimp(email) {
   request(options, function(error, response, body) {
     if (error)
       throw new Error(error);
+      console.log(body);
+    return res.render('index');
   });
 
 }

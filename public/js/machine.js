@@ -168,7 +168,6 @@ $(document).ready(function() {
     }, function(data) {
       if (data == 'sent') {
         console.log(data);
-        $("#message").empty().html("Email is been sent at " + to + ".Please check inbox!");
       }
     })
   });
