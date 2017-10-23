@@ -17,6 +17,7 @@ p {
 
 h1 {
   font-family: 'Montserrat';
+  font-weight: bold;
 }
 
 
@@ -50,6 +51,7 @@ iframe {
 ul#menu li {
   font-family: 'Montserrat';
   color: #000;
+  font-weight: bold;
   background: #fff;
   background: rgba(255, 255, 255, 0.0);
   margin-top: 7.7%;
@@ -95,8 +97,8 @@ ul#menu li {
 img {
   position: absolute;
   width: 11%;
-  top: 6px;
-  left: 7px;
+  top: 25px;
+  left: 27px;
 }
 
 #menu {
@@ -287,7 +289,6 @@ button.arrow {
   transform: translateY(-50%);
 }
 
-
 /* Animation */
 
 .anim-typewriter {
@@ -362,13 +363,14 @@ div.bar {
 }
 
 h4.text-center {
-  font-size: 2vw;
+  font-family: 'Montserrat';
+  font-weight: bold;
   margin-top: 13%;
-  font-family: 'Montaga';
 }
 
-#founder {
-  font-size: 2.8vw;
+span.founder {
+  font-weight: 400;
+  font-family: 'Montaga';
 }
 
 
@@ -377,13 +379,6 @@ h4.text-center {
 #section5 h3 {
   font-family: 'Montserrat';
   margin-bottom: 6%;
-}
-
-input.form-control {
-  border: none;
-  border-bottom: 2px solid black;
-  border-radius: 0px;
-  box-shadow: none;
 }
 
 label.control-label {
@@ -398,6 +393,8 @@ small.help-block {
 #content-label {
   font-size: small;
 }
+
+
 /* ---- grid ---- */
 
 .grid {
@@ -534,23 +531,23 @@ small.help-block {
 }
 
 button.btn.btn-theme {
-    background: black;
-    color: #fff;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    border-radius: 7px;
-    box-shadow: 0 5px darkslategrey;
-    padding: 10px 16px 10px 16px;
+  background: black;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 7px;
+  box-shadow: 0 5px darkslategrey;
+  padding: 10px 16px 10px 16px;
 }
 
 button.btn.btn-theme:active {
-    background: darkslategrey;
+  background: darkslategrey;
 }
 
 button.btn.btn-theme:disabled {
-    background: darkslategrey;
-    box-shadow: 0px 0px;
+  background: darkslategrey;
+  box-shadow: 0px 0px;
 }
 
 .sidebar-nav li a:hover {
@@ -728,10 +725,11 @@ p.message {
 }
 
 #section6 h3, h5, h6, p {
-    font-size: 2rem;
-    text-align: center;
-    font-family: 'Montaga';
-    letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Montaga';
+  letter-spacing: 1px;
 }
 
 .box {
@@ -744,16 +742,16 @@ p.message {
   margin: 0 auto;
 }
 
-#quote{
+#quote {
   -webkit-transform: translate3d(0, 0, 0);
-  line-height:36px;
+  line-height: 36px;
   color: black;
 }
 
 span#brand {
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 4rem;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 4rem;
 }
 
 .float {
@@ -776,12 +774,138 @@ span#brand {
   }
 }
 
+.scrolldown-container {
+  width: 6rem;
+  position: absolute;
+  background: #FCB6C7;
+  height: 5rem;
+  left: 0;
+  border-radius: 40px;
+  right: 0;
+  margin: 0px auto;
+}
+
+.scrolldown-container .scrolldown-btn {
+  width: 2rem;
+  height: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+
+.scrolldown-container .scrolldown-btn svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.scrolldown-container .scrolldown-btn svg path.first-path {
+  animation: scrollanim 1s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+.scrolldown-container .scrolldown-btn svg path.second-path {
+  animation: scrollanim2 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes scrollanim {
+  0% {
+    -webkit-transform: translate(0, -40px);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes scrollanim {
+  0% {
+    -moz-transform: translate(0, -40px);
+    opacity: 0;
+  }
+  60% {
+    -moz-transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
+@keyframes scrollanim {
+  0% {
+    -webkit-transform: translate(0, -40px);
+    -moz-transform: translate(0, -40px);
+    -ms-transform: translate(0, -40px);
+    -o-transform: translate(0, -40px);
+    transform: translate(0, -40px);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes scrollanim2 {
+  0% {
+    -webkit-transform: translate(0, -40px);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: translate(0, 0px);
+    opacity: 0.6;
+  }
+}
+
+@-moz-keyframes scrollanim2 {
+  0% {
+    -moz-transform: translate(0, -40px);
+    opacity: 0;
+  }
+  60% {
+    -moz-transform: translate(0, 0px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes scrollanim2 {
+  0% {
+    -webkit-transform: translate(0, -40px);
+    -moz-transform: translate(0, -40px);
+    -ms-transform: translate(0, -40px);
+    -o-transform: translate(0, -40px);
+    transform: translate(0, -40px);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+    opacity: 0.6;
+  }
+}
+
 #section6 button {
   background: none;
   border: 2px solid;
   font: inherit;
+  border-radius: 10px;
   line-height: 1;
-  margin: 0.5em;
   padding: 1em 2em;
   color: var(--color);
   -webkit-transition: 0.25s;
@@ -793,26 +917,24 @@ span#brand {
   color: #fff;
 }
 
-.fill:hover,
-.fill:focus {
+.fill:hover, .fill:focus {
   box-shadow: inset 0 0 0 2em var(--hover);
 }
 
 .fill {
-  --color: #778899;
-  --hover: #000;
+  --color: black;
+  --hover: #FFB6C7;
 }
+
 
 /*// Small screens*/
 
 @media only screen {
   /* Define mobile styles */
-
   button#rightArrow {
     right: -10px;
     width: 53px;
   }
-
   #rightArrow span {
     left: 0px;
   }
@@ -889,39 +1011,34 @@ span#brand {
   .header h1 {
     margin-top: 25%;
   }
-
   .line-1 {
     font-size: 1.4em;
   }
-
   button#rightArrow {
     width: 100px;
   }
-
   .circle {
     padding-top: 5%;
     >>>>>>>b90ebf90f72256755bcafc49552c31320d471f8d
   }
-
   #section1, #section2, #section3 {
     background-image: none;
   }
-
   ul#menu li {
     display: none;
   }
-
   div#page-content-wrapper {
     display: block;
   }
-
   #footer .row div ul {
     padding-left: 0;
   }
   /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 }
 
+
 /*// Medium screens*/
+
 @media only screen and (min-width: 40.063em) {
   button#rightArrow {
     width: 100px;
@@ -929,131 +1046,130 @@ span#brand {
   h1 .line1 .anim-typewriter {
     font-size: 1em;
   }
-
   #section1, #section2, #section3 {
     background-image: none;
   }
-
   button#rightArrow {
     width: 100px;
   }
-
   ul#menu li {
     display: none;
   }
-
   div#page-content-wrapper {
     display: block;
   }
   /* min-width 641px, medium screens */
 }
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   #section1, #section2, #section3 {
     background-image: none;
   }
-
   ul#menu li {
     display: none;
   }
-
   div#page-content-wrapper {
     display: block;
   }
-
   button#rightArrow {
     width: 100px;
   }
-
   #menu-button {
     margin: 0% 80%;
   }
 }
+
+
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
 
 /**/
 
+
 /*// Large screens*/
+
 @media only screen and (min-width: 64.063em) {
   #section1, #section2, #section3 {}
-
   ul#menu li {
     display: inline-block;
   }
-
   button#rightArrow {
     width: 100px;
   }
-
   div#page-content-wrapper {
     display: none;
   }
 }
+
+
 /* min-width 1025px, large screens */
+
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
   #section1, #section2, #section3 {}
-
   ul#menu li {
     display: inline-block;
   }
-
   button#rightArrow {
     width: 100px;
   }
-
   div#page-content-wrapper {
     display: none;
   }
 }
+
+
 /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 
+
 /*// XLarge screens*/
+
 @media only screen and (min-width: 90.063em) {
   #section1, #section2, #section3 {}
-
   ul#menu li {
     display: inline-block;
   }
-
   div#page-content-wrapper {
     display: none;
   }
-
   button#rightArrow {
     width: 100px;
   }
 }
+
+
 /* min-width 1441px, xlarge screens */
+
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   #section1, #section2, #section3 {}
-
   ul#menu li {
     display: inline-block;
   }
-
   button#rightArrow {
     width: 100px;
   }
-
   div#page-content-wrapper {
     display: none;
   }
 }
+
+
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 
+
 /*// XXLarge screens*/
+
 @media only screen and (min-width: 120.063em) {
   #section1, #section2, #section3 {}
-
   ul#menu li {
     display: inline-block;
   }
-
   div#page-content-wrapper {
     display: none;
   }
-
   button#rightArrow {
     width: 100px;
   }
 }
+
+
 /* min-width 1921px, xxlarge screens */
