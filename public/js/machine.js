@@ -2,6 +2,8 @@ var deleteLog = false;
 
 $(document).ready(function() {
 
+  const splashPage = $("#splash-page");
+
   $('#splash-text').mousemove(function(e) {
     var rXP = (e.pageX - this.offsetLeft - $(this).width() / 2);
     var rYP = (e.pageY - this.offsetTop - $(this).height() / 2);
@@ -9,12 +11,12 @@ $(document).ready(function() {
   });
 
   $("#enter-machine").click(function() {
-    $("#splash-page").fadeOut();
+    TweenMax.to(splashPage, 1, {autoAlpha:0});
   });
 
   setTimeout(function() {
-    $("#splash-page").fadeOut();
-  }, 10000);
+    TweenMax.to(splashPage, 1, {autoAlpha:0});
+  }, 8000);
 
   var controller = new ScrollMagic.Controller();
 
