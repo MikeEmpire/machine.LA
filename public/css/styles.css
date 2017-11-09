@@ -2,15 +2,186 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat';
 }
 
-body {
-  font-family: 'Montserrat';
+div#splash-page {
+  z-index: 10000;
+  height: 100vh;
+  position: absolute;
+  background: white;
+  width: 100%;
+}
+
+#splash-logo {
+  position: relative;
+  width: 50%;
+  left: 25%;
+}
+
+div#splash-page div#arkscroll {
+  top: 80%;
+  position: relative;
 }
 
 h1 {
   font-weight: bold;
 }
+
+h1#splash-text {
+  font-weight: 300;
+  text-align: center;
+  margin-top: 6%;
+  animation-name: topFadeIn;
+  animation-duration: 5s;
+}
+
+div#splash-page a {
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 3%;
+  left: 50%;
+  color: black;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 0.7em calc(0.7em * 1.2);
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 1.5em;
+  letter-spacing: 0.07em;
+}
+
+div#splash-page a .text {
+  font-family: proxima-nova;
+  transform: translate3d(0, 0.7em, 0);
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+div#splash-page a:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: calc(0.7em * 1.2);
+  right: calc(0.7em * 1.2);
+  height: 3px;
+  background: #f26522;
+  z-index: -1;
+  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+  transform-origin: left;
+}
+
+div#splash-page .line {
+  position: absolute;
+  background: #f26522;
+}
+div#splash-page .line.-right, div#splash-page .line.-left {
+  width: 3px;
+  bottom: -3px;
+  top: -3px;
+  transform: scale3d(1, 0, 1);
+}
+div#splash-page .line.-top, div#splash-page .line.-bottom {
+  height: 3px;
+  left: -3px;
+  right: -3px;
+  transform: scale3d(0, 1, 1);
+}
+div#splash-page .line.-right {
+  right: -3px;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+  transform-origin: top;
+}
+div#splash-page .line.-top {
+  top: -3px;
+  transition: transform 0.08s linear 0.43s;
+  transform-origin: left;
+}
+div#splash-page .line.-left {
+  left: -3px;
+  transition: transform 0.08s linear 0.51s;
+  transform-origin: bottom;
+}
+div#splash-page .line.-bottom {
+  bottom: -3px;
+  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  transform-origin: right;
+}
+
+a:hover .text,
+a:active .text {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+div#splash-page a:hover:after,
+div#splash-page a:active:after {
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  transform-origin: right;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+}
+div#splash-page a:hover .line,
+div#splash-page a:active .line {
+  transform: scale3d(1, 1, 1);
+}
+div#splash-page a:hover .line.-right,
+div#splash-page a:active .line.-right {
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  transform-origin: bottom;
+}
+div#splash-page a:hover .line.-top,
+div#splash-page a:active .line.-top {
+  transition: transform 0.08s linear 0.4s;
+  transform-origin: right;
+}
+div#splash-page a:hover .line.-left,
+div#splash-page a:active .line.-left {
+  transition: transform 0.08s linear 0.48s;
+  transform-origin: top;
+}
+div#splash-page a:hover .line.-bottom,
+div#splash-page a:active .line.-bottom {
+  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+  transform-origin: left;
+}
+
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 
 @keyframes fadein {
     from {
@@ -45,6 +216,15 @@ h1 {
     }
 }
 
+@keyframes topFadeIn {
+  from {
+    margin-top: 4%;
+  }
+  to {
+    margin-top: 6%;
+  }
+}
+
 .section {
   text-align: center;
 }
@@ -64,9 +244,13 @@ h1 {
  * --------------------------------------- */
 
 iframe {
-  margin-top: 9%;
+  margin-top: 19%;
   height: 40%;
   width: 60%;
+}
+
+.svg-wrap {
+  display: none;
 }
 
 ul#menu li {
@@ -143,72 +327,6 @@ img {
   background-color: white;
 }
 
-img#svg {
-  position: relative;
-  width: 60%;
-  animation: fadein 5s;
-  -moz-animation: fadein 5s; /* Firefox */
-  -webkit-animation: fadein 5s; /* Safari and Chrome */
-  -o-animation: fadein 5s; /* Opera */
-}
-
-#section1 .col-xs-12 {
-  margin-top: 10%;
-}
-
-#section1 .col-xs-12 h1 {
-  font-size: x-large;
-  margin-top: 20%;
-  animation: fadein 9s;
-  -moz-animation: fadein 9s; /* Firefox */
-  -webkit-animation: fadein 9s; /* Safari and Chrome */
-  -o-animation: fadein 9s
-}
-
-div#intro {
-  height: 70vh;
-}
-
-
-.frame {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 400px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-}
-.frame .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background: white;
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  overflow: hidden;
-}
-
-.frame .card img {
-  display: block;
-  position: relative;
-  width: 150%;
-  height: auto;
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-}
-
 .half-width {
   height: 100%;
   width: 50%;
@@ -261,7 +379,7 @@ button.arrow {
 }
 
 button.arrow:focus {
-  background-color: #5EF4F6;
+  background-color: rgb(0, 173, 239);
 }
 
 .arrow span {
@@ -286,6 +404,10 @@ button.arrow:focus {
 #rightArrow:hover span {
   left: 10px;
   color: #FFF;
+}
+
+button:hover svg.icon:hover {
+  fill: white;
 }
 
 #footer {

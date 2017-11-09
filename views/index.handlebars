@@ -1,3 +1,16 @@
+<div id="splash-page">
+  <div>
+    <img id="splash-logo" src="/images/machinelogo.svg" alt="Logo for the machine">
+    <h1 id="splash-text">Click the arrows or scroll up and down to navigate <span>TheMachine.</span></h1>
+    <a id="enter-machine">
+      <span class="text">Enter</span>
+      <span class="line -right"></span>
+      <span class="line -top"></span>
+      <span class="line -left"></span>
+      <span class="line -bottom"></span>
+    </a>
+  </div>
+</div>
 <div id="wrapper">
   <!-- Sidebar -->
   <div id="sidebar-wrapper">
@@ -16,6 +29,14 @@
     </ul>
   </div>
   <!-- /#sidebar-wrapper -->
+</div>
+<div class="svg-wrap">
+  <svg width="64" height="64" viewBox="0 0 64 64">
+    <path id="arrow-left-5" d="M48 10.667q1.104 0 1.885 0.781t0.781 1.885-0.792 1.896l-16.771 16.771 16.771 16.771q0.792 0.792 0.792 1.896t-0.781 1.885-1.885 0.781q-1.125 0-1.896-0.771l-18.667-18.667q-0.771-0.771-0.771-1.896t0.771-1.896l18.667-18.667q0.771-0.771 1.896-0.771zM32 10.667q1.104 0 1.885 0.781t0.781 1.885-0.792 1.896l-16.771 16.771 16.771 16.771q0.792 0.792 0.792 1.896t-0.781 1.885-1.885 0.781q-1.125 0-1.896-0.771l-18.667-18.667q-0.771-0.771-0.771-1.896t0.771-1.896l18.667-18.667q0.771-0.771 1.896-0.771z" />
+  </svg>
+  <svg width="64" height="64" viewBox="0 0 64 64">
+    <path id="arrow-right-5" d="M29.333 10.667q1.104 0 1.875 0.771l18.667 18.667q0.792 0.792 0.792 1.896t-0.792 1.896l-18.667 18.667q-0.771 0.771-1.875 0.771t-1.885-0.781-0.781-1.885q0-1.125 0.771-1.896l16.771-16.771-16.771-16.771q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76zM13.333 10.667q1.104 0 1.875 0.771l18.667 18.667q0.792 0.792 0.792 1.896t-0.792 1.896l-18.667 18.667q-0.771 0.771-1.875 0.771t-1.885-0.781-0.781-1.885q0-1.125 0.771-1.896l16.771-16.771-16.771-16.771q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76z" />
+  </svg>
 </div>
 
 <!-- Page Content -->
@@ -50,8 +71,8 @@
 <!-- Page Content -->
 <!-- /#page-content-wrapper -->
 <div class="container">
-  <button class="arrow" id="rightArrow"><span>&#8594;</span></button>
-  <button class="arrow" id="leftArrow"><span>&#8592;</span></button>
+  <button class="arrow" id="rightArrow"><span><svg fill="#D3D3D3" class="icon" width="32" height="32" viewBox="0 0 64 64"><use xlink:href="#arrow-right-5"></svg></span></button>
+  <button class="arrow" id="leftArrow"><span><svg fill="#D3D3D3" class="icon" width="32" height="32" viewBox="0 0 64 64"><use xlink:href="#arrow-left-5"></svg></span></button>
 </div>
 <div class="container" id="footer">
   <div class="row">
@@ -66,25 +87,6 @@
 </div>
 <div id="pagepiling">
   <div class="section pp-scrollable" id="section1">
-    <div class="content">
-      <div class="newSection">
-        <div class="header row">
-          <div class="scrolldown-container" id="homescroll">
-            <div class="scrolldown-btn">
-              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="80px" viewbox="0 0 50 80" enable-background="new 0 0 50 80" xml:space="preserve">
-        <path class="first-path" fill="#FFFFFF" d="M24.752,79.182c-0.397,0-0.752-0.154-1.06-0.463L2.207,57.234c-0.306-0.305-0.458-0.656-0.458-1.057                  s0.152-0.752,0.458-1.059l2.305-2.305c0.309-0.309,0.663-0.461,1.06-0.461c0.398,0,0.752,0.152,1.061,0.461l18.119,18.119                  l18.122-18.119c0.306-0.309,0.657-0.461,1.057-0.461c0.402,0,0.753,0.152,1.059,0.461l2.306,2.305                  c0.308,0.307,0.461,0.658,0.461,1.059s-0.153,0.752-0.461,1.057L25.813,78.719C25.504,79.027,25.15,79.182,24.752,79.182z"></path>
-        <path class="second-path" fill="#FFFFFF" d="M24.752,58.25c-0.397,0-0.752-0.154-1.06-0.463L2.207,36.303c-0.306-0.304-0.458-0.655-0.458-1.057                  c0-0.4,0.152-0.752,0.458-1.058l2.305-2.305c0.309-0.308,0.663-0.461,1.06-0.461c0.398,0,0.752,0.153,1.061,0.461l18.119,18.12                  l18.122-18.12c0.306-0.308,0.657-0.461,1.057-0.461c0.402,0,0.753,0.153,1.059,0.461l2.306,2.305                  c0.308,0.306,0.461,0.657,0.461,1.058c0,0.401-0.153,0.753-0.461,1.057L25.813,57.787C25.504,58.096,25.15,58.25,24.752,58.25z"></path>
-      </svg>
-            </div>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 frame">
-            <div class="card">
-              <img class="background-img" id="svg" src="/images/machinelogo.svg" alt="Logo for the machine.">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="intro">
       <iframe src="https://player.vimeo.com/video/197622894" width="560" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       <div class="layer">

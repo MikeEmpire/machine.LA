@@ -2,6 +2,20 @@ var deleteLog = false;
 
 $(document).ready(function() {
 
+  $('#splash-text').mousemove(function(e) {
+    var rXP = (e.pageX - this.offsetLeft - $(this).width() / 2);
+    var rYP = (e.pageY - this.offsetTop - $(this).height() / 2);
+    $('#splash-text').css('text-shadow', + rYP / 10 + 'px ' + rXP / 80 + 'px rgba(227,6,19,.8), ' + rYP / 8 + 'px ' + rXP / 60 + 'px rgba(255,237,0,1), ' + rXP / 70 + 'px ' + rYP / 12 + 'px rgba(0,159,227,.7)');
+  });
+
+  $("#enter-machine").click(function() {
+    $("#splash-page").fadeOut();
+  });
+
+  setTimeout(function() {
+    $("#splash-page").fadeOut();
+  }, 10000);
+
   var controller = new ScrollMagic.Controller();
 
   var mySplitText = new SplitText("#quote", {type: "lines"}),
@@ -14,13 +28,7 @@ $(document).ready(function() {
     }
   }, 0.2)
 
-  var scene = new ScrollMagic.Scene({
-    triggerElement: '#page2',
-    duration: 300,
-    offset: -250
-  })
-  .setTween(tl)
-  .addTo(controller)
+  var scene = new ScrollMagic.Scene({triggerElement: '#page2', duration: 300, offset: -250}).setTween(tl).addTo(controller)
 
   $("#menu-toggle").click(function(e) {
     e.preventDefault();
