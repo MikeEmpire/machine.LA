@@ -40,7 +40,7 @@ div#splash-page a {
   text-decoration: none;
   cursor: pointer;
   margin-top: 3%;
-  left: 50%;
+  top: 40rem;
   color: black;
   transform: translate3d(-50%, -50%, 0);
   padding: 0.7em calc(0.7em * 1.2);
@@ -379,7 +379,7 @@ button.arrow {
 }
 
 button.arrow:focus {
-  background-color: rgb(0, 173, 239);
+  background-color: rgb(0, 173, 239, .3);
 }
 
 .arrow span {
@@ -392,12 +392,8 @@ button.arrow:focus {
   transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
 }
 
-.arrow:hover {
-  background: #FFB6C7;
-}
-
 #leftArrow:hover span {
-  left: -20px;
+  left: -10px;
   color: #FFF;
 }
 
@@ -407,7 +403,11 @@ button.arrow:focus {
 }
 
 button:hover svg.icon:hover {
-  fill: white;
+  fill: gray;
+}
+
+.arrow:hover span svg.icon {
+    fill: #FFB6C7;
 }
 
 #footer {
