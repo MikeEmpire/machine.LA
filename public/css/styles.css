@@ -993,7 +993,6 @@ span#brand {
 }
 
 div#arkscroll {
-  top: 29%;
   left: 10;
 }
 
@@ -1169,10 +1168,10 @@ form#mc-embedded-subscribe-form {
     width: 53px;
   }
   #rightArrow span {
-    left: 0px;
+    left: -5px;
   }
   #leftArrow span {
-    left: 0px;
+    left: -5px;
   }
   #section1, #section2, #section3 {
     background-image: none;
