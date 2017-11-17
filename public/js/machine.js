@@ -8,9 +8,9 @@ $(document).ready(function() {
     TweenMax.to(splashPage, 1, {autoAlpha:0});
   });
   
-  // setTimeout(function() {
-  //   TweenMax.to(splashPage, 1, {autoAlpha:0});
-  // }, 8000);
+  setTimeout(function() {
+    TweenMax.to(splashPage, 1, {autoAlpha:0});
+  }, 8000);
 
   var controller = new ScrollMagic.Controller();
 
