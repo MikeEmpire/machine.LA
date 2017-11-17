@@ -13,34 +13,32 @@ div#splash-page {
   width: 100%;
 }
 
+div.splashpage-section {
+  width: 100%;
+  height: 50vh;
+  -webkit-box-align: center;
+  -webkit-box-pack:center;
+  display:-webkit-box;
+}
+
+div#splashscroll {
+  left: 0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 #splash-logo {
   position: relative;
-  width: 50%;
-  left: 25%;
-}
-
-div#splash-page div#arkscroll {
-  top: 80%;
-  position: relative;
-}
-
-h1 {
-  font-weight: bold;
-}
-
-h1#splash-text {
-  font-weight: 300;
-  text-align: center;
-  margin-top: 6%;
-  animation-name: topFadeIn;
-  animation-duration: 5s;
+  width: 30%;
+  margin: 0 auto;
+  left: 36%;
 }
 
 div#splash-page a {
   text-decoration: none;
   cursor: pointer;
-  margin-top: 3%;
-  top: 40rem;
+  left: 5rem;
   color: black;
   transform: translate3d(-50%, -50%, 0);
   padding: 0.7em calc(0.7em * 1.2);
@@ -64,7 +62,7 @@ div#splash-page a:after {
   left: calc(0.7em * 1.2);
   right: calc(0.7em * 1.2);
   height: 3px;
-  background: #f26522;
+  background: #FFB6C7;
   z-index: -1;
   transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
   transform-origin: left;
@@ -72,7 +70,7 @@ div#splash-page a:after {
 
 div#splash-page .line {
   position: absolute;
-  background: #f26522;
+  background: #FFB6C7;
 }
 div#splash-page .line.-right, div#splash-page .line.-left {
   width: 3px;
@@ -258,7 +256,7 @@ ul#menu li {
   font-weight: bold;
   background: #fff;
   background: rgba(255, 255, 255, 0.0);
-  margin-top: 7.7%;
+  margin-top: 9%;
   margin-left: 4%;
   -moz-transition: all .2s ease-in;
   -o-transition: all .2s ease-in;
@@ -309,11 +307,20 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  height: 40px;
   z-index: 70;
   width: 100%;
   padding: 0;
   margin: 0px;
+  background: white;
+}
+
+div#page-content-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  top: 0;
+  background: white;
 }
 
 /* Sections
@@ -363,7 +370,7 @@ button.arrow {
   text-align: center;
   cursor: pointer;
   position: fixed;
-  top: 50%;
+  top: 55%;
   width: 100px;
   height: 100px;
   z-index: 100;
@@ -976,10 +983,10 @@ span#brand {
 }
 
 .scrolldown-container {
-  width: 6rem;
+  width: 3em;
   position: absolute;
   background: #FCB6C7;
-  height: 5rem;
+  height: 3em;
   border-radius: 40px;
   right: 0;
   margin: 0px auto;
@@ -993,6 +1000,17 @@ div#arkscroll {
 div#homescroll {
     top: 17%;
     left: 10;
+}
+
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+
+form#mc-embedded-subscribe-form {
+  margin-bottom: 10%;
 }
 
 .scrolldown-container .scrolldown-btn {
@@ -1120,6 +1138,7 @@ div#homescroll {
   color: var(--color);
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  margin-bottom: 40%;
 }
 
 #section6 button:hover, button:focus {
@@ -1231,7 +1250,7 @@ div#homescroll {
     font-size: 1.4em;
   }
   button#rightArrow {
-    width: 50px;
+    width: 61px;
   }
   button#leftArrow {
     width: 50px;
