@@ -1168,10 +1168,10 @@ form#mc-embedded-subscribe-form {
     width: 53px;
   }
   #rightArrow span {
-    left: -5px;
+    left: -8px;
   }
   #leftArrow span {
-    left: -5px;
+    left: 0px;
   }
   #section1, #section2, #section3 {
     background-image: none;
