@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
-
 * {
   box-sizing: border-box;
   font-family: 'Montserrat';
@@ -17,15 +16,15 @@ div.splashpage-section {
   width: 100%;
   height: 50vh;
   -webkit-box-align: center;
-  -webkit-box-pack:center;
-  display:-webkit-box;
+  -webkit-box-pack: center;
+  display: -webkit-box;
 }
 
 div#splashscroll {
   left: 0;
-  right:0;
-  margin-left:auto;
-  margin-right:auto;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #splash-logo {
@@ -55,6 +54,7 @@ div#splash-page a .text {
   display: block;
   transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
 }
+
 div#splash-page a:after {
   position: absolute;
   content: '';
@@ -72,77 +72,81 @@ div#splash-page .line {
   position: absolute;
   background: #FFB6C7;
 }
+
 div#splash-page .line.-right, div#splash-page .line.-left {
   width: 3px;
   bottom: -3px;
   top: -3px;
   transform: scale3d(1, 0, 1);
 }
+
 div#splash-page .line.-top, div#splash-page .line.-bottom {
   height: 3px;
   left: -3px;
   right: -3px;
   transform: scale3d(0, 1, 1);
 }
+
 div#splash-page .line.-right {
   right: -3px;
   transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
   transform-origin: top;
 }
+
 div#splash-page .line.-top {
   top: -3px;
   transition: transform 0.08s linear 0.43s;
   transform-origin: left;
 }
+
 div#splash-page .line.-left {
   left: -3px;
   transition: transform 0.08s linear 0.51s;
   transform-origin: bottom;
 }
+
 div#splash-page .line.-bottom {
   bottom: -3px;
   transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
   transform-origin: right;
 }
 
-a:hover .text,
-a:active .text {
+a:hover .text, a:active .text {
   transform: translate3d(0, 0, 0);
   transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
 }
-div#splash-page a:hover:after,
-div#splash-page a:active:after {
+
+div#splash-page a:hover:after, div#splash-page a:active:after {
   transform: scale3d(0, 1, 1);
   right: -3px;
   left: -3px;
   transform-origin: right;
   transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
 }
-div#splash-page a:hover .line,
-div#splash-page a:active .line {
+
+div#splash-page a:hover .line, div#splash-page a:active .line {
   transform: scale3d(1, 1, 1);
 }
-div#splash-page a:hover .line.-right,
-div#splash-page a:active .line.-right {
+
+div#splash-page a:hover .line.-right, div#splash-page a:active .line.-right {
   transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
   transform-origin: bottom;
 }
-div#splash-page a:hover .line.-top,
-div#splash-page a:active .line.-top {
+
+div#splash-page a:hover .line.-top, div#splash-page a:active .line.-top {
   transition: transform 0.08s linear 0.4s;
   transform-origin: right;
 }
-div#splash-page a:hover .line.-left,
-div#splash-page a:active .line.-left {
+
+div#splash-page a:hover .line.-left, div#splash-page a:active .line.-left {
   transition: transform 0.08s linear 0.48s;
   transform-origin: top;
 }
-div#splash-page a:hover .line.-bottom,
-div#splash-page a:active .line.-bottom {
+
+div#splash-page a:hover .line.-bottom, div#splash-page a:active .line.-bottom {
   transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
   transform-origin: left;
 }
-
 
 @keyframes fadeout {
   from {
@@ -180,38 +184,43 @@ div#splash-page a:active .line.-bottom {
   }
 }
 
-
 @keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes topFadeIn {
@@ -236,7 +245,6 @@ div#splash-page a:active .line.-bottom {
 #pp-nav {
   display: none;
 }
-
 
 /* Menu
  * --------------------------------------- */
@@ -414,7 +422,7 @@ button:hover svg.icon:hover {
 }
 
 .arrow:hover span svg.icon {
-    fill: #FFB6C7;
+  fill: #FFB6C7;
 }
 
 #footer {
@@ -428,7 +436,6 @@ button:hover svg.icon:hover {
 #footer li {
   display: inline-block;
 }
-
 
 /* Intro texts
 	 * --------------------------------------- */
@@ -453,7 +460,6 @@ p#about {
 #section4 .intro {
   color: #000;
 }
-
 
 /* Content page
 	 * --------------------------------------- */
@@ -587,7 +593,6 @@ span.founder {
   font-weight: 300;
 }
 
-
 /*  CONTACT PAGE */
 
 #section5 h3 {
@@ -602,14 +607,12 @@ label.control-label {
   font-size: small;
 }
 
-
 /* ---- grid ---- */
 
 .grid {
   background: #EEE;
   max-width: 1200px;
 }
-
 
 /* clearfix */
 
@@ -618,7 +621,6 @@ label.control-label {
   display: block;
   clear: both;
 }
-
 
 /* ---- grid-item ---- */
 
@@ -655,7 +657,6 @@ label.control-label {
 .grid-item--height4 {
   height: 360px;
 }
-
 
 /* ---- static-banner ---- */
 
@@ -713,7 +714,6 @@ label.control-label {
   position: absolute;
   margin-right: -250px;
 }
-
 
 /* Sidebar Styles */
 
@@ -806,7 +806,6 @@ button.btn.btn-theme:disabled {
     margin-right: 0;
   }
 }
-
 
 /*
     CSS for sidebar icon on smaller screens
@@ -997,8 +996,8 @@ div#arkscroll {
 }
 
 div#homescroll {
-    top: 17%;
-    left: 10;
+  top: 17%;
+  left: 10;
 }
 
 #mc_embed_signup {
@@ -1154,24 +1153,23 @@ form#mc-embedded-subscribe-form {
   --hover: #FFB6C7;
 }
 
-
 /*// Small screens*/
 
 @media only screen {
   /* Define mobile styles */
   button#rightArrow {
-    right: -10px;
-    width: 53px;
+    right: -1em;
+    width: 5.3em;
   }
   button#leftArrow {
-    left: -10px;
-    width: 53px;
+    left: -1em;
+    width: 5.3em;
   }
   #rightArrow span {
     left: -8%;
   }
   #leftArrow span {
-    left: -3px;
+    left: 10%;
   }
   #section1, #section2, #section3 {
     background-image: none;
@@ -1188,7 +1186,7 @@ form#mc-embedded-subscribe-form {
   #footer .row div ul {
     padding-left: 0;
   }
-   #menu-button {
+  #menu-button {
     margin: -10% 70%;
   }
   #menu-button #cross {
@@ -1221,7 +1219,6 @@ form#mc-embedded-subscribe-form {
     left: 50px;
     margin: 10px 0;
   }
-
 }
 
 #menu-button #cross span:nth-child(1) {
@@ -1249,10 +1246,10 @@ form#mc-embedded-subscribe-form {
     font-size: 1.4em;
   }
   button#rightArrow {
-    width: 61px;
+    width: 3.5em;
   }
   button#leftArrow {
-    width: 50px;
+    width: 2.5em;
   }
   .circle {
     padding-top: 5%;
@@ -1271,7 +1268,6 @@ form#mc-embedded-subscribe-form {
   }
   /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 }
-
 
 /*// Medium screens*/
 
@@ -1311,19 +1307,17 @@ form#mc-embedded-subscribe-form {
     width: 100px;
   }
   button#leftArrow {
-    width: 100px;;
+    width: 100px;
+    ;
   }
   #menu-button {
     margin: 0% 80%;
   }
 }
 
-
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
-
 /**/
-
 
 /*// Large screens*/
 
@@ -1343,7 +1337,6 @@ form#mc-embedded-subscribe-form {
   }
 }
 
-
 /* min-width 1025px, large screens */
 
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
@@ -1362,9 +1355,7 @@ form#mc-embedded-subscribe-form {
   }
 }
 
-
 /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
-
 
 /*// XLarge screens*/
 
@@ -1384,7 +1375,6 @@ form#mc-embedded-subscribe-form {
   }
 }
 
-
 /* min-width 1441px, xlarge screens */
 
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
@@ -1403,9 +1393,7 @@ form#mc-embedded-subscribe-form {
   }
 }
 
-
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-
 
 /*// XXLarge screens*/
 
