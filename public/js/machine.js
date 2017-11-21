@@ -7,24 +7,10 @@ $(document).ready(function() {
   $("#enter-machine").click(function() {
     TweenMax.to(splashPage, 1, {autoAlpha:0});
   });
-  
+
   setTimeout(function() {
     TweenMax.to(splashPage, 1, {autoAlpha:0});
   }, 8000);
-
-  var controller = new ScrollMagic.Controller();
-
-  var mySplitText = new SplitText("#quote", {type: "lines"}),
-    tl = new TimelineLite();
-
-  tl.staggerFrom(mySplitText.lines, 0.5, {
-    opacity: 0,
-    cycle: {
-      x: [100, -100]
-    }
-  }, 0.2)
-
-  var scene = new ScrollMagic.Scene({triggerElement: '#page2', duration: 300, offset: -250}).setTween(tl).addTo(controller)
 
   $("#menu-toggle").click(function(e) {
     e.preventDefault();
@@ -63,24 +49,7 @@ $(document).ready(function() {
         function random(min, max) {
           return (Math.random() * (max - min)) + min;
         }
-
-        var text = $(".split");
-
-        var split = new SplitText(text);
-
-        $(split.chars).each(function(i) {
-          TweenMax.from($(this), 2.5, {
-            opacity: 0,
-            x: random(-500, 500),
-            y: random(-500, 500),
-            z: random(-500, 500),
-            scale: .1,
-            delay: i * .02,
-            yoyo: true,
-            repeat: 0
-          });
-        });
-
+        
         $('#rightArrow').hide();
 
         //fading out navigation bullets

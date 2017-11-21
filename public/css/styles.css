@@ -925,7 +925,7 @@ p.message {
 }
 
 .newSection {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -952,8 +952,9 @@ div#page2 {
 
 #quote {
   -webkit-transform: translate3d(0, 0, 0);
-  line-height: 36px;
+  line-height: 23px;
   color: black;
+  letter-spacing: 0px
 }
 
 span#brand {
@@ -964,6 +965,10 @@ span#brand {
 .float {
   margin: 20% 0;
   animation: levitate 1.2s alternate ease-in-out infinite;
+}
+
+div#mc_embed_signup_scroll {
+  padding: 0px 7%;
 }
 
 @keyframes levitate {
@@ -1013,7 +1018,7 @@ form#mc-embedded-subscribe-form {
 
 .scrolldown-container .scrolldown-btn {
   width: 2rem;
-  height: 5rem;
+  height: 4rem;
   position: absolute;
   left: 50%;
   top: 30%;
