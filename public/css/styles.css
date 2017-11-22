@@ -922,6 +922,9 @@ span.menu {
 p.message {
   margin-top: 31%;
   font-size: 2rem;
+  line-height: 23px;
+  color: black;
+  letter-spacing: 0px
 }
 
 .newSection {
@@ -948,13 +951,6 @@ div#page2 {
 .source {
   color: skyblue;
   margin: 0 auto;
-}
-
-#quote {
-  -webkit-transform: translate3d(0, 0, 0);
-  line-height: 23px;
-  color: black;
-  letter-spacing: 0px
 }
 
 span#brand {
